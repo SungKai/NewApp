@@ -13,21 +13,27 @@
 //V
 #import "NavView.h"
 
-@interface MainViewController ()<UIScrollViewDelegate>
-@property (nonatomic, strong) CurrentNewsViewController *curView;
-@property (nonatomic, strong) FunnyNewsViewController *funView;
-@property (nonatomic, strong) SchoolNewsViewController *schoolView;
+@interface MainViewController ()<UIScrollViewDelegate, NavDelegate>
+@property (nonatomic, strong) CurrentNewsViewController *curVC;
+@property (nonatomic, strong) FunnyNewsViewController *funVC;
+@property (nonatomic, strong) SchoolNewsViewController *schoolVC;
 @property (nonatomic, strong) NavView *navView;
 //用于实现左右滑动切换界面
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, assign) NSInteger currentIndex;
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:self.navView];
     [self.view addSubview:self.scrollView];
+//    [self.scrollView addSubview:self.curVC];
+    [self setMainScrollView];
+    //设置默认
+    self.currentIndex = 0;
+    [self.navView silderAction:self.currentIndex];
     
 }
 #pragma mark - lazy
@@ -44,35 +50,80 @@
     }
     return _scrollView;
 }
-//curView
-- (CurrentNewsViewController *)curView {
-    if (!_curView) {
-        _curView = [[CurrentNewsViewController alloc] init];
+//curVC
+- (CurrentNewsViewController *)curVC {
+    if (!_curVC) {
+        _curVC = [[CurrentNewsViewController alloc] init];
     }
-    return _curView;
+    return _curVC;
 }
-//funView
-- (FunnyNewsViewController *)funView {
-    if (!_funView) {
-        _funView = [[FunnyNewsViewController alloc] init];
+//funVC
+- (FunnyNewsViewController *)funVC {
+    if (!_funVC) {
+        _funVC = [[FunnyNewsViewController alloc] init];
     }
-    return _funView;
+    return _funVC;
 }
-//funView
-- (SchoolNewsViewController *)schoolView {
-    if (!_schoolView) {
-        _schoolView = [[SchoolNewsViewController alloc] init];
+//funVC
+- (SchoolNewsViewController *)schoolVC {
+    if (!_schoolVC) {
+        _schoolVC = [[SchoolNewsViewController alloc] init];
     }
-    return _schoolView;
+    return _schoolVC;
 }
 //navView
 - (NavView *)navView {
     if (!_navView) {
-        _navView = [[NavView alloc] init];
+        _navView = [[NavView alloc] initWithNavView:CGRectMake(0, 0, DEVICESCREENWIDTH, NAVHEIGHT)];
+        _navView.navDelegate = self;
     }
     return _navView;
 }
+#pragma mark - 方法
+- (void)setMainScrollView {
+    [self.view addSubview:self.scrollView];
+    //分别添加各个VC
+    NSArray *VCArray = @[self.curVC.view, self.funVC.view, self.schoolVC.view];
+    //逐一加入scrollView
+    for (int i = 0; i < VCArray.count; i++) {
+        UIView *pageView = [[UIView alloc] initWithFrame:CGRectMake(DEVICESCREENWIDTH * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+        [pageView addSubview:VCArray[i]];
+        [self.scrollView addSubview:pageView];
+    }
+    //给scrollView设置好偏移尺寸
+    self.scrollView.contentSize = CGSizeMake(DEVICESCREENWIDTH * VCArray.count, 0);
+    //滚动到首页
+    [self.scrollView setContentOffset:CGPointMake(DEVICESCREENWIDTH * self.currentIndex, 0) animated:YES];
+}
+#pragma mark - <UIScrollViewDelegate>
+//正在滑动的状态：使滑条也跟着滑动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat contentX = scrollView.contentOffset.x;
+    CGFloat X = contentX * (3 * DEVICESCREENWIDTH / 4) / DEVICESCREENWIDTH / 2;
+    //传递应该滑条滑动的x
+    [self.navView diliverTheXWithSilderImageView:X];
+}
+//结束界面的滑动，结果是使UI在一瞬间变化
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    //计算总偏移量
+    CGFloat x = scrollView.contentOffset.x;
+    CGFloat tag = x / DEVICESCREENWIDTH;
+    [self.navView silderAction:tag];
+}
 
+#pragma mark - <NavDelegate>
+//点击了导航栏的按钮后动画跳转到相应界面
+- (void)silderView:(NSInteger)tag {
+    if (self.currentIndex == tag) {
+        return;
+    }
+    self.currentIndex = tag;
+    //动画
+    [UIView animateWithDuration:0.3 animations:^{
+        self.currentIndex = tag;
+        self.scrollView.contentOffset = CGPointMake(DEVICESCREENWIDTH * tag, 0);
+    }];
+}
 /*
 #pragma mark - Navigation
 

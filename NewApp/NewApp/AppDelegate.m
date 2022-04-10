@@ -18,6 +18,7 @@
     // Override point for customization after application launch.
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    self.window.backgroundColor = [UIColor clearColor];
     self.window.rootViewController = nav;
     nav.navigationBar.hidden = YES;
     [self.window makeKeyAndVisible];
