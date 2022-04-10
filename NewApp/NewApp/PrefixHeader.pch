@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  NewApp
+//
+//  Created by 宋开开 on 2022/4/9.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//屏幕的宽和长
+#define DEVICESCREENWIDTH [[UIScreen mainScreen]bounds].size.width
+#define DEVICESCREENHEIGHT [[UIScreen mainScreen]bounds].size.height
+//顶部的滑动栏的高 
+#define NAVHEIGHT 65
+#endif /* PrefixHeader_pch */
