@@ -14,5 +14,5 @@
 #define DEVICESCREENWIDTH [[UIScreen mainScreen]bounds].size.width
 #define DEVICESCREENHEIGHT [[UIScreen mainScreen]bounds].size.height
 //顶部的滑动栏的高 
-#define NAVHEIGHT 65
+#define NAVHEIGHT 75
 #endif /* PrefixHeader_pch */
