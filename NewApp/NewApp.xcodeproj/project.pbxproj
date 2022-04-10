@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
 		B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BE2C22801AF0F0095769A /* AppDelegate.m */; };
 		B54BE2CE2801AF110095769A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54BE2CD2801AF110095769A /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
 		917B21508948659933AFA0B1 /* Pods-NewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.debug.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B54BE2BE2801AF0F0095769A /* NewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1440DD142803007900652F5D /* UIView+Frame */ = {
+			isa = PBXGroup;
+			children = (
+				1440DD122803006400652F5D /* UIView+Frame.h */,
+				1440DD112803006400652F5D /* UIView+Frame.m */,
+			);
+			path = "UIView+Frame";
+			sourceTree = "<group>";
+		};
 		2B56657591FF0C9D98B31688 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,14 +107,15 @@
 			children = (
 				B54BE2C12801AF0F0095769A /* AppDelegate.h */,
 				B54BE2C22801AF0F0095769A /* AppDelegate.m */,
-				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2EA2801B28D0095769A /* MainView */,
 				B54BE2E72801B2380095769A /* CurrentNews */,
 				B54BE2E82801B2470095769A /* FunnyNews */,
 				B54BE2E92801B2550095769A /* SchoolNews */,
 				B54BE2CD2801AF110095769A /* Assets.xcassets */,
+				1440DD142803007900652F5D /* UIView+Frame */,
 				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
 				B54BE2D22801AF110095769A /* Info.plist */,
+				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2D32801AF110095769A /* main.m */,
 			);
 			path = NewApp;
@@ -299,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */,
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,

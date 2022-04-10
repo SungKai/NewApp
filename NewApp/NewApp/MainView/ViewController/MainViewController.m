@@ -13,20 +13,40 @@
 //V
 #import "NavView.h"
 
-@interface MainViewController ()<UIScrollViewDelegate, NavDelegate>
+@interface MainViewController () <
+    UIScrollViewDelegate,
+    NavViewDelegate
+>
+
 @property (nonatomic, strong) CurrentNewsViewController *curVC;
+
 @property (nonatomic, strong) FunnyNewsViewController *funVC;
+
 @property (nonatomic, strong) SchoolNewsViewController *schoolVC;
+
 @property (nonatomic, strong) NavView *navView;
+
 //用于实现左右滑动切换界面
 @property (nonatomic, strong) UIScrollView *scrollView;
+
 @property (nonatomic, assign) NSInteger currentIndex;
+
 @end
 
 @implementation MainViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.view.backgroundColor = UIColor.whiteColor;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     [self.view addSubview:self.navView];
     [self.view addSubview:self.scrollView];
 //    [self.scrollView addSubview:self.curVC];
@@ -36,11 +56,13 @@
     [self.navView silderAction:self.currentIndex];
     
 }
-#pragma mark - lazy
+#pragma mark - Getter
+
 //scrollView
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NAVHEIGHT, DEVICESCREENWIDTH, DEVICESCREENHEIGHT - NAVHEIGHT)];
+        CGFloat a = StatusBarHeight + 23;
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, a, self.view.width, self.view.height - a)];
         _scrollView.backgroundColor = [UIColor lightGrayColor];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
@@ -50,6 +72,7 @@
     }
     return _scrollView;
 }
+
 //curVC
 - (CurrentNewsViewController *)curVC {
     if (!_curVC) {
@@ -57,6 +80,7 @@
     }
     return _curVC;
 }
+
 //funVC
 - (FunnyNewsViewController *)funVC {
     if (!_funVC) {
@@ -64,6 +88,7 @@
     }
     return _funVC;
 }
+
 //funVC
 - (SchoolNewsViewController *)schoolVC {
     if (!_schoolVC) {
@@ -71,35 +96,41 @@
     }
     return _schoolVC;
 }
+
 //navView
 - (NavView *)navView {
     if (!_navView) {
-        _navView = [[NavView alloc] initWithNavView:CGRectMake(0, 0, DEVICESCREENWIDTH, NAVHEIGHT)];
-        _navView.navDelegate = self;
+        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 74)];
+        _navView.delegate = self;
     }
     return _navView;
 }
-#pragma mark - 方法
+
+#pragma mark - Method
 - (void)setMainScrollView {
     [self.view addSubview:self.scrollView];
     //分别添加各个VC
     NSArray *VCArray = @[self.curVC.view, self.funVC.view, self.schoolVC.view];
     //逐一加入scrollView
     for (int i = 0; i < VCArray.count; i++) {
-        UIView *pageView = [[UIView alloc] initWithFrame:CGRectMake(DEVICESCREENWIDTH * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+        UIView *pageView = [[UIView alloc] initWithFrame:CGRectMake(ScreenWidth * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
         [pageView addSubview:VCArray[i]];
         [self.scrollView addSubview:pageView];
     }
     //给scrollView设置好偏移尺寸
-    self.scrollView.contentSize = CGSizeMake(DEVICESCREENWIDTH * VCArray.count, 0);
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth * VCArray.count, 0);
     //滚动到首页
-    [self.scrollView setContentOffset:CGPointMake(DEVICESCREENWIDTH * self.currentIndex, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(ScreenWidth * self.currentIndex, 0) animated:YES];
 }
-#pragma mark - <UIScrollViewDelegate>
+
+#pragma mark - Delegate
+
+// MARK: <UIScrollViewDelegate>
+
 //正在滑动的状态：使滑条也跟着滑动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat contentX = scrollView.contentOffset.x;
-    CGFloat X = contentX * (3 * DEVICESCREENWIDTH / 4) / DEVICESCREENWIDTH / 2;
+    CGFloat X = contentX * (3 * ScreenWidth / 4) / ScreenWidth / 2;
     //传递应该滑条滑动的x
     [self.navView diliverTheXWithSilderImageView:X];
 }
@@ -107,11 +138,12 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     //计算总偏移量
     CGFloat x = scrollView.contentOffset.x;
-    CGFloat tag = x / DEVICESCREENWIDTH;
+    CGFloat tag = x / ScreenWidth;
     [self.navView silderAction:tag];
 }
 
-#pragma mark - <NavDelegate>
+// MARK:  <NavDelegate>
+
 //点击了导航栏的按钮后动画跳转到相应界面
 - (void)silderView:(NSInteger)tag {
     if (self.currentIndex == tag) {
@@ -121,17 +153,8 @@
     //动画
     [UIView animateWithDuration:0.3 animations:^{
         self.currentIndex = tag;
-        self.scrollView.contentOffset = CGPointMake(DEVICESCREENWIDTH * tag, 0);
+        self.scrollView.contentOffset = CGPointMake(ScreenWidth * tag, 0);
     }];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
