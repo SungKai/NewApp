@@ -10,9 +10,8 @@
 
 @implementation NavView
 //初始化方法
-- (instancetype)initWithNavView:(CGRect)frame {
-    if (self = [super init]) {
-        self.frame = frame;
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         [self addSubview:self.currentBtn];
         [self addSubview:self.funnyBtn];
         [self addSubview:self.schoolBtn];
@@ -79,7 +78,7 @@
 - (void)silderAnimateAction:(UIButton *)sender {
     NSInteger tag = sender.tag;
     //1.切换新闻界面，用代理的方式传给MainVC
-    [self.navDelegate silderView:tag];
+    [self.delegate silderView:tag];
     //2.切换UI
     self.currentBtn.selected = NO;
     self.funnyBtn.selected = NO;
