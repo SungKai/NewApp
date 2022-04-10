@@ -46,10 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-    
     [self.view addSubview:self.navView];
-    [self.view addSubview:self.scrollView];
-//    [self.scrollView addSubview:self.curVC];
     [self setMainScrollView];
     //设置默认
     self.currentIndex = 0;
@@ -57,12 +54,11 @@
     
 }
 #pragma mark - Getter
-
 //scrollView
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        CGFloat a = StatusBarHeight + 23;
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, a, self.view.width, self.view.height - a)];
+        CGFloat a = StatusBarHeight;
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, a + 55, self.view.width, self.view.height - a - 55)];
         _scrollView.backgroundColor = [UIColor lightGrayColor];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
@@ -100,7 +96,7 @@
 //navView
 - (NavView *)navView {
     if (!_navView) {
-        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 74)];
+        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, self.view.width, 55)];
         _navView.delegate = self;
     }
     return _navView;
