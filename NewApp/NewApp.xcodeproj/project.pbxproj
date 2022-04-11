@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
+		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
+		B5244C40280462570034FC6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3F280462570034FC6A /* LoginViewController.m */; };
+		B5244C47280466620034FC6A /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C46280466620034FC6A /* PersonViewController.m */; };
 		B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BE2C22801AF0F0095769A /* AppDelegate.m */; };
 		B54BE2CE2801AF110095769A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54BE2CD2801AF110095769A /* Assets.xcassets */; };
 		B54BE2D12801AF110095769A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */; };
@@ -26,6 +29,12 @@
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
 		917B21508948659933AFA0B1 /* Pods-NewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.debug.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B5244C3B2804624A0034FC6A /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		B5244C3C2804624A0034FC6A /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		B5244C3E280462570034FC6A /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B5244C3F280462570034FC6A /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B5244C45280466620034FC6A /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		B5244C46280466620034FC6A /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		B54BE2BE2801AF0F0095769A /* NewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54BE2C12801AF0F0095769A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B54BE2C22801AF0F0095769A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +93,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5244C3A280462280034FC6A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C41280462620034FC6A /* ViewController */,
+				B5244C422804627C0034FC6A /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B5244C41280462620034FC6A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C3E280462570034FC6A /* LoginViewController.h */,
+				B5244C3F280462570034FC6A /* LoginViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B5244C422804627C0034FC6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C3B2804624A0034FC6A /* LoginView.h */,
+				B5244C3C2804624A0034FC6A /* LoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5244C44280465880034FC6A /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C45280466620034FC6A /* PersonViewController.h */,
+				B5244C46280466620034FC6A /* PersonViewController.m */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
 		B54BE2B52801AF0F0095769A = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +152,9 @@
 			children = (
 				B54BE2C12801AF0F0095769A /* AppDelegate.h */,
 				B54BE2C22801AF0F0095769A /* AppDelegate.m */,
-				B54BE2EA2801B28D0095769A /* MainView */,
-				B54BE2E72801B2380095769A /* CurrentNews */,
-				B54BE2E82801B2470095769A /* FunnyNews */,
-				B54BE2E92801B2550095769A /* SchoolNews */,
+				B5244C44280465880034FC6A /* Person */,
+				B5244C3A280462280034FC6A /* Login */,
+				B54BE2EA2801B28D0095769A /* Main */,
 				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				1440DD142803007900652F5D /* UIView+Frame */,
 				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
@@ -145,13 +189,16 @@
 			path = SchoolNews;
 			sourceTree = "<group>";
 		};
-		B54BE2EA2801B28D0095769A /* MainView */ = {
+		B54BE2EA2801B28D0095769A /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				B54BE2F22801B31D0095769A /* ViewController */,
 				B54BE2EB2801B2A00095769A /* View */,
+				B54BE2E82801B2470095769A /* FunnyNews */,
+				B54BE2E72801B2380095769A /* CurrentNews */,
+				B54BE2E92801B2550095769A /* SchoolNews */,
 			);
-			path = MainView;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		B54BE2EB2801B2A00095769A /* View */ = {
@@ -312,9 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5244C47280466620034FC6A /* PersonViewController.m in Sources */,
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */,
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
+				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
+				B5244C40280462570034FC6A /* LoginViewController.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,
 				B54BE2EE2801B2D60095769A /* NavView.m in Sources */,
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,

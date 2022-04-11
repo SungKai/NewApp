@@ -30,7 +30,7 @@
 - (UIButton *)currentBtn {
     if (!_currentBtn) {
         _currentBtn = [[UIButton alloc] init];
-        [_currentBtn setTitle:@"时事" forState:UIControlStateNormal];
+        [_currentBtn setTitle:@"趣闻" forState:UIControlStateNormal];
         _currentBtn.titleLabel.font = [UIFont systemFontOfSize:20];
         [_currentBtn setTitleColor:[UIColor blackColor] forState:normal];
         [_currentBtn addTarget:self action:@selector(silderAnimateAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,7 +43,7 @@
 - (UIButton *)funnyBtn {
     if (!_funnyBtn) {
         _funnyBtn = [[UIButton alloc] init];
-        [_funnyBtn setTitle:@"趣味" forState:UIControlStateNormal];
+        [_funnyBtn setTitle:@"时事" forState:UIControlStateNormal];
         _funnyBtn.titleLabel.font = [UIFont systemFontOfSize:20];
         [_funnyBtn setTitleColor:[UIColor blackColor] forState:normal];
         [_funnyBtn addTarget:self action:@selector(silderAnimateAction:) forControlEvents:UIControlEventTouchUpInside];
