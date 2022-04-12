@@ -16,8 +16,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //loginVC
-    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    //loginVC    需要伪登陆
+//    LoginViewController *loginVC = [[LoginViewController alloc] init];
     
     //mainVC
     MainViewController *mainVC = [[MainViewController alloc] init];

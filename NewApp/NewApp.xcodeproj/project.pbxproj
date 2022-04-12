@@ -12,6 +12,8 @@
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
 		B5244C40280462570034FC6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3F280462570034FC6A /* LoginViewController.m */; };
 		B5244C47280466620034FC6A /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C46280466620034FC6A /* PersonViewController.m */; };
+		B5244C4D28053ACF0034FC6A /* TopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C4C28053ACF0034FC6A /* TopView.m */; };
+		B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C5128053C120034FC6A /* NSDate+Day.m */; };
 		B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BE2C22801AF0F0095769A /* AppDelegate.m */; };
 		B54BE2CE2801AF110095769A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54BE2CD2801AF110095769A /* Assets.xcassets */; };
 		B54BE2D12801AF110095769A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */; };
@@ -35,6 +37,10 @@
 		B5244C3F280462570034FC6A /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B5244C45280466620034FC6A /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		B5244C46280466620034FC6A /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		B5244C4B28053ACF0034FC6A /* TopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopView.h; sourceTree = "<group>"; };
+		B5244C4C28053ACF0034FC6A /* TopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopView.m; sourceTree = "<group>"; };
+		B5244C5128053C120034FC6A /* NSDate+Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Day.m"; sourceTree = "<group>"; };
+		B5244C5228053C120034FC6A /* NSDate+Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Day.h"; sourceTree = "<group>"; };
 		B54BE2BE2801AF0F0095769A /* NewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54BE2C12801AF0F0095769A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B54BE2C22801AF0F0095769A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +135,24 @@
 			path = Person;
 			sourceTree = "<group>";
 		};
+		B5244C4E28053BB90034FC6A /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C5028053BD10034FC6A /* NSDate+Day */,
+				1440DD142803007900652F5D /* UIView+Frame */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B5244C5028053BD10034FC6A /* NSDate+Day */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C5228053C120034FC6A /* NSDate+Day.h */,
+				B5244C5128053C120034FC6A /* NSDate+Day.m */,
+			);
+			path = "NSDate+Day";
+			sourceTree = "<group>";
+		};
 		B54BE2B52801AF0F0095769A = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +176,11 @@
 			children = (
 				B54BE2C12801AF0F0095769A /* AppDelegate.h */,
 				B54BE2C22801AF0F0095769A /* AppDelegate.m */,
-				B5244C44280465880034FC6A /* Person */,
 				B5244C3A280462280034FC6A /* Login */,
 				B54BE2EA2801B28D0095769A /* Main */,
+				B5244C44280465880034FC6A /* Person */,
 				B54BE2CD2801AF110095769A /* Assets.xcassets */,
-				1440DD142803007900652F5D /* UIView+Frame */,
+				B5244C4E28053BB90034FC6A /* Tool */,
 				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
 				B54BE2D22801AF110095769A /* Info.plist */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
@@ -204,6 +228,8 @@
 		B54BE2EB2801B2A00095769A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5244C4B28053ACF0034FC6A /* TopView.h */,
+				B5244C4C28053ACF0034FC6A /* TopView.m */,
 				B54BE2EC2801B2D60095769A /* NavView.h */,
 				B54BE2ED2801B2D60095769A /* NavView.m */,
 			);
@@ -361,10 +387,12 @@
 			files = (
 				B5244C47280466620034FC6A /* PersonViewController.m in Sources */,
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
+				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
 				B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */,
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
 				B5244C40280462570034FC6A /* LoginViewController.m in Sources */,
+				B5244C4D28053ACF0034FC6A /* TopView.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,
 				B54BE2EE2801B2D60095769A /* NavView.m in Sources */,
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,

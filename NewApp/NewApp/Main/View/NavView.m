@@ -136,7 +136,7 @@
     //funnyBtn
     [self.funnyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.centerY.equalTo(self).offset(10);
+        make.centerY.equalTo(self);
         make.size.mas_equalTo(CGSizeMake(50, 30));
     }];
     //currentBtn

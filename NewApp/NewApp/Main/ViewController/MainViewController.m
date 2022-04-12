@@ -11,6 +11,7 @@
 #import "FunnyNewsViewController.h"
 #import "SchoolNewsViewController.h"
 //V
+#import "TopView.h"
 #import "NavView.h"
 
 @interface MainViewController () <
@@ -23,6 +24,8 @@
 @property (nonatomic, strong) FunnyNewsViewController *funVC;
 
 @property (nonatomic, strong) SchoolNewsViewController *schoolVC;
+
+@property (nonatomic, strong) TopView *topView;
 
 @property (nonatomic, strong) NavView *navView;
 
@@ -45,7 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.whiteColor;
+    [self.view addSubview:self.topView];
     [self.view addSubview:self.navView];
     [self setMainScrollView];
     //设置默认
@@ -58,7 +61,7 @@
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
         CGFloat a = StatusBarHeight;
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, a + 55, self.view.width, self.view.height - a - 55)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navView.frame.origin.y + self.navView.frame.size.height, self.view.width, self.view.height - self.navView.frame.origin.y)];
         _scrollView.backgroundColor = [UIColor lightGrayColor];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
@@ -96,10 +99,17 @@
 //navView
 - (NavView *)navView {
     if (!_navView) {
-        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, self.view.width, 55)];
+        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, self.topView.frame.origin.y + self.topView.frame.size.height, self.view.width, 40)];
         _navView.delegate = self;
     }
     return _navView;
+}
+//topView
+- (TopView *)topView {
+    if (!_topView) {
+        _topView = [[TopView alloc] initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, ScreenWidth, 60)];
+    }
+    return _topView;
 }
 
 #pragma mark - Method
