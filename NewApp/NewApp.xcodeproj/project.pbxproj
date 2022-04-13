@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401029C2806D8F200AB27C2 /* NewPresenter.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1401029B2806D8F200AB27C2 /* NewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewPresenter.h; sourceTree = "<group>"; };
+		1401029C2806D8F200AB27C2 /* NewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewPresenter.m; sourceTree = "<group>"; };
 		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1401029E2806DE8D00AB27C2 /* NewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				1401029B2806D8F200AB27C2 /* NewPresenter.h */,
+				1401029C2806D8F200AB27C2 /* NewPresenter.m */,
+			);
+			path = NewPresenter;
+			sourceTree = "<group>";
+		};
 		1440DD142803007900652F5D /* UIView+Frame */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 			children = (
 				B54BE2C12801AF0F0095769A /* AppDelegate.h */,
 				B54BE2C22801AF0F0095769A /* AppDelegate.m */,
+				1401029E2806DE8D00AB27C2 /* NewPresenter */,
 				B5244C3A280462280034FC6A /* Login */,
 				B54BE2EA2801B28D0095769A /* Main */,
 				B5244C44280465880034FC6A /* Person */,
@@ -388,6 +401,7 @@
 				B5244C47280466620034FC6A /* PersonViewController.m in Sources */,
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
+				1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */,
 				B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */,
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
