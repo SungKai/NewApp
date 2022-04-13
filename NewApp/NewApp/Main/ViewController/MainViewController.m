@@ -14,6 +14,8 @@
 #import "TopView.h"
 #import "NavView.h"
 
+#import "WYNewsModel.h"
+
 @interface MainViewController () <
     UIScrollViewDelegate,
     NavViewDelegate
@@ -33,6 +35,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 
 @property (nonatomic, assign) NSInteger currentIndex;
+
+@property (nonatomic, strong) WYNewsModel *model;
 
 @end
 
@@ -55,6 +59,16 @@
     self.currentIndex = 0;
     [self.navView silderAction:self.currentIndex];
     
+    [HTTPClient.defaultClient test];
+    
+    self.model = [[WYNewsModel alloc] init];
+    [self.model
+     requestSuccess:^{
+        NSLog(@"aaaa");
+    }
+     failure:^(NSError * _Nonnull error) {
+            
+    }];
 }
 #pragma mark - Getter
 //scrollView
