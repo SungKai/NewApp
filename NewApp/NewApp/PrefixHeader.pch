@@ -8,16 +8,13 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#include "UIView+Frame.h"
+#import "URLHeader.h"
+
+#import "ExtentionHeader.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-/// Some About Screen
-#define ScreenWidth ([[UIScreen mainScreen] bounds].size.width)
 
-#define ScreenHeight ([[UIScreen mainScreen]bounds].size.height)
-
-#define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height;
 
 #endif /* PrefixHeader_pch */
