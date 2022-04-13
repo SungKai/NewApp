@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401029C2806D8F200AB27C2 /* NewPresenter.m */; };
+		140102A12806E00F00AB27C2 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102A02806E00F00AB27C2 /* HTTPClient.m */; };
+		140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102A92806E4C500AB27C2 /* QuestionButton.m */; };
+		140102AF2806E4D200AB27C2 /* QuestionSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102AE2806E4D200AB27C2 /* QuestionSelectView.m */; };
+		140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102B22806E51800AB27C2 /* SSRTopBarBaseView.m */; };
+		140102B82806E59200AB27C2 /* SSRTextCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102B72806E59200AB27C2 /* SSRTextCycleCell.m */; };
+		140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102BA2806E5A500AB27C2 /* SSRTextCycleView.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
@@ -30,6 +36,20 @@
 		0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1401029B2806D8F200AB27C2 /* NewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewPresenter.h; sourceTree = "<group>"; };
 		1401029C2806D8F200AB27C2 /* NewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewPresenter.m; sourceTree = "<group>"; };
+		1401029F2806E00F00AB27C2 /* HTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		140102A02806E00F00AB27C2 /* HTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		140102A92806E4C500AB27C2 /* QuestionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionButton.m; sourceTree = "<group>"; };
+		140102AA2806E4C500AB27C2 /* QuestionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionButton.h; sourceTree = "<group>"; };
+		140102AD2806E4D200AB27C2 /* QuestionSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionSelectView.h; sourceTree = "<group>"; };
+		140102AE2806E4D200AB27C2 /* QuestionSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionSelectView.m; sourceTree = "<group>"; };
+		140102B22806E51800AB27C2 /* SSRTopBarBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRTopBarBaseView.m; sourceTree = "<group>"; };
+		140102B32806E51800AB27C2 /* SSRTopBarBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRTopBarBaseView.h; sourceTree = "<group>"; };
+		140102B62806E59200AB27C2 /* SSRTextCycleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRTextCycleCell.h; sourceTree = "<group>"; };
+		140102B72806E59200AB27C2 /* SSRTextCycleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRTextCycleCell.m; sourceTree = "<group>"; };
+		140102BA2806E5A500AB27C2 /* SSRTextCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRTextCycleView.m; sourceTree = "<group>"; };
+		140102BB2806E5A500AB27C2 /* SSRTextCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRTextCycleView.h; sourceTree = "<group>"; };
+		140102BE2806E5E900AB27C2 /* URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLHeader.h; sourceTree = "<group>"; };
+		140102BF2806E5FD00AB27C2 /* ExtentionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtentionHeader.h; sourceTree = "<group>"; };
 		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +103,71 @@
 				1401029C2806D8F200AB27C2 /* NewPresenter.m */,
 			);
 			path = NewPresenter;
+			sourceTree = "<group>";
+		};
+		140102A22806E29700AB27C2 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				1401029F2806E00F00AB27C2 /* HTTPClient.h */,
+				140102A02806E00F00AB27C2 /* HTTPClient.m */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		140102AC2806E4C800AB27C2 /* QuestionButton */ = {
+			isa = PBXGroup;
+			children = (
+				140102AA2806E4C500AB27C2 /* QuestionButton.h */,
+				140102A92806E4C500AB27C2 /* QuestionButton.m */,
+			);
+			path = QuestionButton;
+			sourceTree = "<group>";
+		};
+		140102B12806E4DF00AB27C2 /* QuestionSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				140102AD2806E4D200AB27C2 /* QuestionSelectView.h */,
+				140102AE2806E4D200AB27C2 /* QuestionSelectView.m */,
+				140102AC2806E4C800AB27C2 /* QuestionButton */,
+			);
+			path = QuestionSelectView;
+			sourceTree = "<group>";
+		};
+		140102B52806E51B00AB27C2 /* SSRTopBarBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				140102B32806E51800AB27C2 /* SSRTopBarBaseView.h */,
+				140102B22806E51800AB27C2 /* SSRTopBarBaseView.m */,
+			);
+			path = SSRTopBarBaseView;
+			sourceTree = "<group>";
+		};
+		140102B92806E59500AB27C2 /* SSRTextCycleCell */ = {
+			isa = PBXGroup;
+			children = (
+				140102B62806E59200AB27C2 /* SSRTextCycleCell.h */,
+				140102B72806E59200AB27C2 /* SSRTextCycleCell.m */,
+			);
+			path = SSRTextCycleCell;
+			sourceTree = "<group>";
+		};
+		140102BD2806E5AF00AB27C2 /* SSRTextCycleView */ = {
+			isa = PBXGroup;
+			children = (
+				140102BB2806E5A500AB27C2 /* SSRTextCycleView.h */,
+				140102BA2806E5A500AB27C2 /* SSRTextCycleView.m */,
+				140102B92806E59500AB27C2 /* SSRTextCycleCell */,
+			);
+			path = SSRTextCycleView;
+			sourceTree = "<group>";
+		};
+		140102C02806E72E00AB27C2 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				140102BE2806E5E900AB27C2 /* URLHeader.h */,
+				140102BF2806E5FD00AB27C2 /* ExtentionHeader.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		1440DD142803007900652F5D /* UIView+Frame */ = {
@@ -150,6 +235,7 @@
 		B5244C4E28053BB90034FC6A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				140102C02806E72E00AB27C2 /* Define */,
 				B5244C5028053BD10034FC6A /* NSDate+Day */,
 				1440DD142803007900652F5D /* UIView+Frame */,
 			);
@@ -192,11 +278,15 @@
 				B5244C3A280462280034FC6A /* Login */,
 				B54BE2EA2801B28D0095769A /* Main */,
 				B5244C44280465880034FC6A /* Person */,
-				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				B5244C4E28053BB90034FC6A /* Tool */,
-				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
-				B54BE2D22801AF110095769A /* Info.plist */,
+				140102A22806E29700AB27C2 /* HTTPClient */,
+				140102BD2806E5AF00AB27C2 /* SSRTextCycleView */,
+				140102B52806E51B00AB27C2 /* SSRTopBarBaseView */,
+				140102B12806E4DF00AB27C2 /* QuestionSelectView */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
+				B54BE2CD2801AF110095769A /* Assets.xcassets */,
+				B54BE2D22801AF110095769A /* Info.plist */,
+				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
 				B54BE2D32801AF110095769A /* main.m */,
 			);
 			path = NewApp;
@@ -402,16 +492,22 @@
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
 				1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */,
+				140102B82806E59200AB27C2 /* SSRTextCycleCell.m in Sources */,
+				140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */,
 				B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */,
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
+				140102AF2806E4D200AB27C2 /* QuestionSelectView.m in Sources */,
 				B5244C40280462570034FC6A /* LoginViewController.m in Sources */,
+				140102A12806E00F00AB27C2 /* HTTPClient.m in Sources */,
 				B5244C4D28053ACF0034FC6A /* TopView.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,
 				B54BE2EE2801B2D60095769A /* NavView.m in Sources */,
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
 				B54BE2E52801B0140095769A /* SchoolNewsViewController.m in Sources */,
+				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
+				140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
