@@ -14,6 +14,8 @@
 		140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102B22806E51800AB27C2 /* SSRTopBarBaseView.m */; };
 		140102B82806E59200AB27C2 /* SSRTextCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102B72806E59200AB27C2 /* SSRTextCycleCell.m */; };
 		140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102BA2806E5A500AB27C2 /* SSRTextCycleView.m */; };
+		140102C32806F9F400AB27C2 /* WYNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102C22806F9F400AB27C2 /* WYNewsModel.m */; };
+		140102C62806FA0900AB27C2 /* WYNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102C52806FA0900AB27C2 /* WYNews.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
@@ -50,6 +52,10 @@
 		140102BB2806E5A500AB27C2 /* SSRTextCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRTextCycleView.h; sourceTree = "<group>"; };
 		140102BE2806E5E900AB27C2 /* URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLHeader.h; sourceTree = "<group>"; };
 		140102BF2806E5FD00AB27C2 /* ExtentionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtentionHeader.h; sourceTree = "<group>"; };
+		140102C12806F9F400AB27C2 /* WYNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYNewsModel.h; sourceTree = "<group>"; };
+		140102C22806F9F400AB27C2 /* WYNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYNewsModel.m; sourceTree = "<group>"; };
+		140102C42806FA0900AB27C2 /* WYNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYNews.h; sourceTree = "<group>"; };
+		140102C52806FA0900AB27C2 /* WYNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYNews.m; sourceTree = "<group>"; };
 		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +176,35 @@
 			path = Define;
 			sourceTree = "<group>";
 		};
+		140102C72806FCBF00AB27C2 /* WYNews */ = {
+			isa = PBXGroup;
+			children = (
+				140102C42806FA0900AB27C2 /* WYNews.h */,
+				140102C52806FA0900AB27C2 /* WYNews.m */,
+			);
+			path = WYNews;
+			sourceTree = "<group>";
+		};
+		140102C82806FE2000AB27C2 /* WYNewsModel */ = {
+			isa = PBXGroup;
+			children = (
+				140102C12806F9F400AB27C2 /* WYNewsModel.h */,
+				140102C22806F9F400AB27C2 /* WYNewsModel.m */,
+				140102C72806FCBF00AB27C2 /* WYNews */,
+			);
+			path = WYNewsModel;
+			sourceTree = "<group>";
+		};
+		140102C92807011000AB27C2 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				140102BD2806E5AF00AB27C2 /* SSRTextCycleView */,
+				140102B52806E51B00AB27C2 /* SSRTopBarBaseView */,
+				140102B12806E4DF00AB27C2 /* QuestionSelectView */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		1440DD142803007900652F5D /* UIView+Frame */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +273,7 @@
 				140102C02806E72E00AB27C2 /* Define */,
 				B5244C5028053BD10034FC6A /* NSDate+Day */,
 				1440DD142803007900652F5D /* UIView+Frame */,
+				140102A22806E29700AB27C2 /* HTTPClient */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -278,11 +314,9 @@
 				B5244C3A280462280034FC6A /* Login */,
 				B54BE2EA2801B28D0095769A /* Main */,
 				B5244C44280465880034FC6A /* Person */,
+				140102C92807011000AB27C2 /* BaseView */,
 				B5244C4E28053BB90034FC6A /* Tool */,
-				140102A22806E29700AB27C2 /* HTTPClient */,
-				140102BD2806E5AF00AB27C2 /* SSRTextCycleView */,
-				140102B52806E51B00AB27C2 /* SSRTopBarBaseView */,
-				140102B12806E4DF00AB27C2 /* QuestionSelectView */,
+				140102C82806FE2000AB27C2 /* WYNewsModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				B54BE2D22801AF110095769A /* Info.plist */,
@@ -491,6 +525,7 @@
 				B5244C47280466620034FC6A /* PersonViewController.m in Sources */,
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
+				140102C32806F9F400AB27C2 /* WYNewsModel.m in Sources */,
 				1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */,
 				140102B82806E59200AB27C2 /* SSRTextCycleCell.m in Sources */,
 				140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */,
@@ -507,6 +542,7 @@
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
 				B54BE2E52801B0140095769A /* SchoolNewsViewController.m in Sources */,
 				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
+				140102C62806FA0900AB27C2 /* WYNews.m in Sources */,
 				140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

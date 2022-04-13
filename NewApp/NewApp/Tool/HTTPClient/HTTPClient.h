@@ -18,11 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (void)GET:(NSString *)url
- parameters:(nullable id)parameters
-   progress:(nullable void (^)(NSProgress *progress))downloadProgress
-    success:(nullable void (^)(NSURLSessionDataTask *, id))success
-    failure:(nullable void (^)(NSURLSessionDataTask *, NSError *))failure;
+- (instancetype)initWithCoder:(NSCoder *)coder NS_UNAVAILABLE;
+
+- (void)test;
 
 @end
 
