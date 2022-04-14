@@ -74,7 +74,7 @@
 //scrollView
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        CGFloat a = StatusBarHeight;
+//        CGFloat a = StatusBarHeight;
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navView.frame.origin.y + self.navView.frame.size.height, self.view.width, self.view.height - self.navView.frame.origin.y)];
         _scrollView.backgroundColor = [UIColor lightGrayColor];
         _scrollView.delegate = self;

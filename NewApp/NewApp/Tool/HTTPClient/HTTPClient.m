@@ -55,6 +55,7 @@ static HTTPClient *client;
      parameters:nil
      progress:nil
      success:^(NSURLSessionDataTask * task, id responseObject) {
+//        NSLog(@"%@========================", [responseObject class]);
         NSLog(@"\n%@", responseObject);
     }
      failure:^(NSURLSessionDataTask * task, NSError * error) {

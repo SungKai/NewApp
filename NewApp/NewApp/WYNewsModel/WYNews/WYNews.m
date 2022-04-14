@@ -17,6 +17,7 @@
         self.digest = dict[@"digest"];
         self.imgURL = dict[@"imgsrc"];
         self.newsURL = [NSString stringWithFormat:@"https://3g.163.com/news/article/%@.html",  dict[@"docid"]];
+        //H4TPBAO90512D3VJ
     }
     return self;
 }

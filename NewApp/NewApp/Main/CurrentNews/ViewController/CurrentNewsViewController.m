@@ -6,7 +6,8 @@
 //
 
 #import "CurrentNewsViewController.h"
-
+//M
+#import "WYNewsModel.h"
 @interface CurrentNewsViewController ()
 
 @end

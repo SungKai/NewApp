@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 
-//点击按钮切换新闻界面
+/// 点击按钮切换新闻界面
+/// @param tag 按钮的号码
 - (void)silderView:(NSInteger)tag;
 
 @end
@@ -32,10 +33,12 @@ NS_ASSUME_NONNULL_BEGIN
 //代理
 @property (nonatomic, weak) id <NavViewDelegate> delegate;
 
-//界面滑动，使滑条同时也跟着滑动
+/// 界面滑动，使滑条同时也跟着滑动
+/// @param x 界面滑动的距离经过计算得到的适合滑条滑动的距离
 - (void)diliverTheXWithSilderImageView:(CGFloat)x;
 
-//直接滑动界面的静态结果
+/// 直接滑动界面的静态结果
+/// @param tag 按钮的号码
 - (void)silderAction:(NSInteger)tag;
 
 @end
