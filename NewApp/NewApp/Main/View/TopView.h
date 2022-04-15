@@ -10,6 +10,27 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TopView : UIView
+/// 头像
+@property (nonatomic, strong) UIButton *personalBtn;
+
+/// 用户名
+@property (nonatomic, strong) UILabel *nameLbl;
+
+/// 月份
+@property (nonatomic, strong) UILabel *monthNumber;
+
+/// 日期
+@property (nonatomic, strong) UILabel *dayNumber;
+
+
+/// 星期x
+@property (nonatomic, strong) UILabel *dayDate;
+
+/// 线1
+@property (nonatomic, strong) UILabel *line1;
+
+/// 线2
+@property (nonatomic, strong) UILabel *line2;
 
 @end
 

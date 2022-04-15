@@ -7,7 +7,12 @@
 
 #import "FunnyNewsViewController.h"
 
+//View
+#import "BannerView.h"
+
 @interface FunnyNewsViewController ()
+
+@property (nonatomic, strong) BannerView *bannerView;
 
 @end
 
@@ -17,6 +22,22 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.bannerView];
+}
+
+#pragma mark-懒加载
+- (BannerView *)bannerView{
+    if (!_bannerView) {
+        _bannerView = [[BannerView alloc] init];
+        _bannerView.backgroundColor = [UIColor blackColor];
+        [_bannerView stretchLeft_toPointX:self.view.left offset:20];
+        [_bannerView stretchTop_toPointY:self.view.top offset:20];
+        [_bannerView stretchRight_toPointX:self.view.right offset:20];
+        _bannerView.height = 200;
+        
+        
+    }
+    return _bannerView;
 }
 
 /*
