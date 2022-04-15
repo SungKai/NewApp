@@ -26,7 +26,7 @@
     return self;
 }
 #pragma mark-懒加载
-- (UIButton *)personalBtn{
+- (UIButton *)personalBtn {
     if (!_personalBtn) {
         _personalBtn = [[UIButton alloc] init];
         _personalBtn.width = _personalBtn.height = 50;
@@ -41,7 +41,7 @@
     return _personalBtn;
 }
 
-- (UILabel *)nameLbl{
+- (UILabel *)nameLbl {
     if (!_nameLbl) {
         _nameLbl = [[UILabel alloc] init];
         _nameLbl.text = @"用户名";
@@ -58,7 +58,7 @@
 }
 
 
-- (UILabel *)line1{
+- (UILabel *)line1 {
     if (!_line1) {
         _line1 = [[UILabel alloc] init];
         _line1.text = @"|";
@@ -72,7 +72,7 @@
     return _line1;
 }
 
-- (UILabel *)monthNumber{
+- (UILabel *)monthNumber {
     if (!_monthNumber) {
         _monthNumber = [[UILabel alloc] init];
         _monthNumber.text = @"xx月";
@@ -86,7 +86,7 @@
     return _monthNumber;
 }
 
-- (UILabel *)dayNumber{
+- (UILabel *)dayNumber {
     if (!_dayNumber) {
         _dayNumber = [[UILabel alloc] init];
         _dayNumber.text = @"xx日";
@@ -100,7 +100,7 @@
     return _dayNumber;
 }
 
-- (UILabel *)line2{
+- (UILabel *)line2 {
     if (!_line2) {
         _line2 = [[UILabel alloc] init];
         _line2.text = @"|";
@@ -114,7 +114,7 @@
     return _line2;
 }
 
-- (UILabel *)dayDate{
+- (UILabel *)dayDate {
     if (!_dayDate) {
         _dayDate = [[UILabel alloc] init];
         _dayDate.text = @"星期x";
