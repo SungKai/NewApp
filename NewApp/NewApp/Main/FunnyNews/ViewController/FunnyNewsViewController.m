@@ -9,6 +9,8 @@
 
 //View
 #import "BannerView.h"
+//Tool
+#import "UIView+RoundCorner.h"
 
 @interface FunnyNewsViewController ()
 
@@ -35,7 +37,7 @@
         [_bannerView stretchRight_toPointX:self.view.right offset:20];
         _bannerView.height = 200;
         
-        
+        [_bannerView applyRoundCorners:UIRectCornerAllCorners radius:10];
     }
     return _bannerView;
 }

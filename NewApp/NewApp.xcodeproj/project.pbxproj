@@ -18,6 +18,7 @@
 		140102C62806FA0900AB27C2 /* WYNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102C52806FA0900AB27C2 /* WYNews.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		7A5260732809B626000A06BC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260722809B626000A06BC /* BannerView.m */; };
+		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
 		B5244C40280462570034FC6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3F280462570034FC6A /* LoginViewController.m */; };
@@ -62,6 +63,8 @@
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
 		7A5260712809B626000A06BC /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		7A5260722809B626000A06BC /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		7A5260BF2809BD0A000A06BC /* UIView+RoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
+		7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 		917B21508948659933AFA0B1 /* Pods-NewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.debug.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5244C3B2804624A0034FC6A /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		B5244C3C2804624A0034FC6A /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
@@ -235,6 +238,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7A5260BE2809BCF5000A06BC /* UIView+RoundCorner */ = {
+			isa = PBXGroup;
+			children = (
+				7A5260BF2809BD0A000A06BC /* UIView+RoundCorner.h */,
+				7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */,
+			);
+			path = "UIView+RoundCorner";
+			sourceTree = "<group>";
+		};
 		A50D12402E82F868433F4185 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +294,7 @@
 		B5244C4E28053BB90034FC6A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7A5260BE2809BCF5000A06BC /* UIView+RoundCorner */,
 				140102C02806E72E00AB27C2 /* Define */,
 				B5244C5028053BD10034FC6A /* NSDate+Day */,
 				1440DD142803007900652F5D /* UIView+Frame */,
@@ -555,6 +568,7 @@
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
 				B54BE2E52801B0140095769A /* SchoolNewsViewController.m in Sources */,
 				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
+				7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */,
 				140102C62806FA0900AB27C2 /* WYNews.m in Sources */,
 				7A5260732809B626000A06BC /* BannerView.m in Sources */,
 				140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */,
