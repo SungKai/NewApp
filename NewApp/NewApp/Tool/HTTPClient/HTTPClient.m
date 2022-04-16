@@ -48,19 +48,4 @@ static HTTPClient *client;
     return client;
 }
 
-
-- (void)test {
-    [self
-     GET:WY163
-     parameters:nil
-     progress:nil
-     success:^(NSURLSessionDataTask * task, id responseObject) {
-//        NSLog(@"%@========================", [responseObject class]);
-        NSLog(@"\n%@", responseObject);
-    }
-     failure:^(NSURLSessionDataTask * task, NSError * error) {
-            
-    }];
-}
-
 @end

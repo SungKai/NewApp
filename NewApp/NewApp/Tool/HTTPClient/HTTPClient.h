@@ -20,8 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithCoder:(NSCoder *)coder NS_UNAVAILABLE;
 
-- (void)test;
-
 @end
 
 NS_ASSUME_NONNULL_END

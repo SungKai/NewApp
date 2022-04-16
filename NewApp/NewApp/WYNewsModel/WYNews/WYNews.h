@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 单个新闻
+/// 单个网易新闻
 @interface WYNews : NSObject
 
 /// 所属来源
