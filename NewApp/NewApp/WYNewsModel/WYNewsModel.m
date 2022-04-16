@@ -20,11 +20,11 @@
 - (void)requestSuccess:(void (^)(void))success
                failure:(void (^)(NSError * _Nonnull))failure {
     [HTTPClient.defaultClient
-     GET:WY163
+     GET:WY163_Headline
      parameters:nil
      progress:nil
      success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"🟢WYNewsModel:\n%@", responseObject);
+        NSLog(@"🟢%@:\n%@", self.class, responseObject);
         NSMutableArray *ma = NSMutableArray.array;
         for (NSDictionary *dict in responseObject[@"T1348647853363"]) {
             WYNews *aNew = [[WYNews alloc] initWithDictionary:dict];
@@ -36,7 +36,7 @@
         }
     }
      failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"🔴WYNewsModel:\n%@", error);
+        NSLog(@"🔴%@:\n%@", self.class, error);
         if (failure) {
             failure(error);
         }

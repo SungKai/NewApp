@@ -16,6 +16,9 @@
 		140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102BA2806E5A500AB27C2 /* SSRTextCycleView.m */; };
 		140102C32806F9F400AB27C2 /* WYNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102C22806F9F400AB27C2 /* WYNewsModel.m */; };
 		140102C62806FA0900AB27C2 /* WYNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102C52806FA0900AB27C2 /* WYNews.m */; };
+		142B7485280AE48B008B6485 /* ZHNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B7484280AE48B008B6485 /* ZHNews.m */; };
+		142B7488280AE7A9008B6485 /* ZHSectionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B7487280AE7A9008B6485 /* ZHSectionNews.m */; };
+		142B7490280AF004008B6485 /* ZHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B748F280AF004008B6485 /* ZHNewsModel.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		7A5260732809B626000A06BC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260722809B626000A06BC /* BannerView.m */; };
 		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
@@ -60,6 +63,12 @@
 		140102C22806F9F400AB27C2 /* WYNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYNewsModel.m; sourceTree = "<group>"; };
 		140102C42806FA0900AB27C2 /* WYNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYNews.h; sourceTree = "<group>"; };
 		140102C52806FA0900AB27C2 /* WYNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYNews.m; sourceTree = "<group>"; };
+		142B7483280AE48B008B6485 /* ZHNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHNews.h; sourceTree = "<group>"; };
+		142B7484280AE48B008B6485 /* ZHNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNews.m; sourceTree = "<group>"; };
+		142B7486280AE7A9008B6485 /* ZHSectionNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHSectionNews.h; sourceTree = "<group>"; };
+		142B7487280AE7A9008B6485 /* ZHSectionNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHSectionNews.m; sourceTree = "<group>"; };
+		142B748E280AF004008B6485 /* ZHNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHNewsModel.h; sourceTree = "<group>"; };
+		142B748F280AF004008B6485 /* ZHNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNewsModel.m; sourceTree = "<group>"; };
 		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,13 +188,13 @@
 			path = SSRTextCycleView;
 			sourceTree = "<group>";
 		};
-		140102C02806E72E00AB27C2 /* Define */ = {
+		140102C02806E72E00AB27C2 /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				140102BE2806E5E900AB27C2 /* URLHeader.h */,
 				140102BF2806E5FD00AB27C2 /* ExtentionHeader.h */,
 			);
-			path = Define;
+			path = Header;
 			sourceTree = "<group>";
 		};
 		140102C72806FCBF00AB27C2 /* WYNews */ = {
@@ -215,6 +224,35 @@
 				140102B12806E4DF00AB27C2 /* QuestionSelectView */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		142B7491280AF6C8008B6485 /* ZHNews */ = {
+			isa = PBXGroup;
+			children = (
+				142B7483280AE48B008B6485 /* ZHNews.h */,
+				142B7484280AE48B008B6485 /* ZHNews.m */,
+			);
+			path = ZHNews;
+			sourceTree = "<group>";
+		};
+		142B7492280AF6D2008B6485 /* ZHSectionNews */ = {
+			isa = PBXGroup;
+			children = (
+				142B7486280AE7A9008B6485 /* ZHSectionNews.h */,
+				142B7487280AE7A9008B6485 /* ZHSectionNews.m */,
+				142B7491280AF6C8008B6485 /* ZHNews */,
+			);
+			path = ZHSectionNews;
+			sourceTree = "<group>";
+		};
+		142B7493280AF6DC008B6485 /* ZHNewsModel */ = {
+			isa = PBXGroup;
+			children = (
+				142B748E280AF004008B6485 /* ZHNewsModel.h */,
+				142B748F280AF004008B6485 /* ZHNewsModel.m */,
+				142B7492280AF6D2008B6485 /* ZHSectionNews */,
+			);
+			path = ZHNewsModel;
 			sourceTree = "<group>";
 		};
 		1440DD142803007900652F5D /* UIView+Frame */ = {
@@ -328,7 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				7A5260BE2809BCF5000A06BC /* UIView+RoundCorner */,
-				140102C02806E72E00AB27C2 /* Define */,
+				140102C02806E72E00AB27C2 /* Header */,
 				B5244C5028053BD10034FC6A /* NSDate+Day */,
 				1440DD142803007900652F5D /* UIView+Frame */,
 				140102A22806E29700AB27C2 /* HTTPClient */,
@@ -375,6 +413,7 @@
 				140102C92807011000AB27C2 /* BaseView */,
 				B5244C4E28053BB90034FC6A /* Tool */,
 				140102C82806FE2000AB27C2 /* WYNewsModel */,
+				142B7493280AF6DC008B6485 /* ZHNewsModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				B54BE2D22801AF110095769A /* Info.plist */,
@@ -596,6 +635,7 @@
 				140102AF2806E4D200AB27C2 /* QuestionSelectView.m in Sources */,
 				B5244C40280462570034FC6A /* LoginViewController.m in Sources */,
 				140102A12806E00F00AB27C2 /* HTTPClient.m in Sources */,
+				142B7490280AF004008B6485 /* ZHNewsModel.m in Sources */,
 				B5244C4D28053ACF0034FC6A /* TopView.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,
 				7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */,
@@ -604,8 +644,10 @@
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
 				B54BE2E52801B0140095769A /* SchoolNewsViewController.m in Sources */,
 				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
+				142B7488280AE7A9008B6485 /* ZHSectionNews.m in Sources */,
 				7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */,
 				140102C62806FA0900AB27C2 /* WYNews.m in Sources */,
+				142B7485280AE48B008B6485 /* ZHNews.m in Sources */,
 				7A5260732809B626000A06BC /* BannerView.m in Sources */,
 				140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */,
 			);
@@ -745,11 +787,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MFF5WD4K94;
+				DEVELOPMENT_TEAM = 727CVV9PLJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewApp/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SKNewApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -774,11 +817,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MFF5WD4K94;
+				DEVELOPMENT_TEAM = 727CVV9PLJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewApp/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SKNewApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
