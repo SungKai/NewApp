@@ -15,6 +15,7 @@
 #import "NavView.h"
 
 #import "WYNewsModel.h"
+#import "ZHNewsModel.h"
 
 @interface MainViewController () <
     UIScrollViewDelegate,
@@ -36,7 +37,11 @@
 
 @property (nonatomic, assign) NSInteger currentIndex;
 
-@property (nonatomic, strong) WYNewsModel *model;
+#pragma mark - SSR Test
+
+@property (nonatomic, strong) WYNewsModel *wyNewModel;
+
+@property (nonatomic, strong) ZHNewsModel *zhNewModel;
 
 @end
 
@@ -59,17 +64,38 @@
     self.currentIndex = 0;
     [self.navView silderAction:self.currentIndex];
     
-    [HTTPClient.defaultClient test];
-    
-    self.model = [[WYNewsModel alloc] init];
-    [self.model
+    self.wyNewModel = [[WYNewsModel alloc] init];
+    [self.wyNewModel
      requestSuccess:^{
         NSLog(@"aaaa");
     }
      failure:^(NSError * _Nonnull error) {
             
     }];
+    
+    self.zhNewModel = [[ZHNewsModel alloc] init];
+    [self.zhNewModel
+     requestLastest:^{
+        NSLog(@"bbbbb");
+        [self requestBefore];
+    }
+     failure:^(NSError * _Nonnull error) {
+        
+    }];
 }
+
+- (void)requestBefore {
+    NSInteger count = self.zhNewModel.bodyNewsModel.count;
+    [self.zhNewModel
+     requestBeforeDate:self.zhNewModel.bodyNewsModel[count - 1].date
+     success:^{
+        NSLog(@"%@", self);
+    }
+     failure:^(NSError *error) {
+        
+    }];
+}
+
 #pragma mark - Getter
 //scrollView
 - (UIScrollView *)scrollView {
