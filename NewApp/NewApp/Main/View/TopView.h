@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 日期
 @property (nonatomic, strong) UILabel *dayNumber;
 
-
 /// 星期x
 @property (nonatomic, strong) UILabel *dayDate;
 
@@ -31,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 线2
 @property (nonatomic, strong) UILabel *line2;
+
+//大小设置
+- (void)setPosition;
 
 @end
 
