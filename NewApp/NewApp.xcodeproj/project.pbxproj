@@ -485,8 +485,8 @@
 		B54BE2E72801B2380095769A /* CurrentNews */ = {
 			isa = PBXGroup;
 			children = (
-				7A7604622809C48D001BC1B1 /* View */,
 				B54BE2EF2801B2E90095769A /* ViewController */,
+				7A7604622809C48D001BC1B1 /* View */,
 			);
 			path = CurrentNews;
 			sourceTree = "<group>";
@@ -494,8 +494,8 @@
 		B54BE2E82801B2470095769A /* FunnyNews */ = {
 			isa = PBXGroup;
 			children = (
-				7A5260702809B616000A06BC /* View */,
 				B54BE2F02801B30F0095769A /* ViewController */,
+				7A5260702809B616000A06BC /* View */,
 			);
 			path = FunnyNews;
 			sourceTree = "<group>";

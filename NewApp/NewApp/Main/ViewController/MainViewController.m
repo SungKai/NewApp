@@ -64,14 +64,7 @@
     self.currentIndex = 0;
     [self.navView silderAction:self.currentIndex];
     
-    self.wyNewModel = [[WYNewsModel alloc] init];
-    [self.wyNewModel
-     requestSuccess:^{
-        NSLog(@"aaaa");
-    }
-     failure:^(NSError * _Nonnull error) {
-            
-    }];
+    
     
     self.zhNewModel = [[ZHNewsModel alloc] init];
     [self.zhNewModel

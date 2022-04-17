@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 小标题
 @property (nonatomic, strong) UILabel *hintLab;
 
-
+///图片
+@property (nonatomic, strong) UIImageView *imgView;
 
 /// 复用池
 + (CurrentNewsCell *)CreateReusableCell:(UITableView *)tableView;

@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) CurrentNewsTableView *tableView;
 
+@property (nonatomic, strong) WYNewsModel *wyNewModel;
+
 @end
 
 @implementation CurrentNewsViewController
@@ -25,6 +27,16 @@
     self.view.backgroundColor = [UIColor systemYellowColor];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
+    //加载数据
+    self.wyNewModel = [[WYNewsModel alloc] init];
+    [self.wyNewModel
+     requestSuccess:^{
+        //传递数据给View
+//        NSLog(@"============%ld", self.wyNewModel.newsAry.count);
+        NSLog(@"aaaa");
+    }
+     failure:^(NSError * _Nonnull error) {
+    }];
 }
 
 #pragma mark-懒加载
