@@ -21,6 +21,8 @@
 		142B7490280AF004008B6485 /* ZHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B748F280AF004008B6485 /* ZHNewsModel.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
+		7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548536280DBA2A00338BF1 /* PersonFirstView.m */; };
+		7A54853A280DBA3700338BF1 /* PersonSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548539280DBA3700338BF1 /* PersonSecondView.m */; };
 		7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */; };
 		7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604852809CED8001BC1B1 /* CurrentNewsTableView.m */; };
 		7A7604A8280B1F6A001BC1B1 /* SchoolNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604A7280B1F6A001BC1B1 /* SchoolNewsTableView.m */; };
@@ -78,6 +80,10 @@
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
 		7A5260BF2809BD0A000A06BC /* UIView+RoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
 		7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
+		7A548535280DBA2A00338BF1 /* PersonFirstView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonFirstView.h; sourceTree = "<group>"; };
+		7A548536280DBA2A00338BF1 /* PersonFirstView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonFirstView.m; sourceTree = "<group>"; };
+		7A548538280DBA3700338BF1 /* PersonSecondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSecondView.h; sourceTree = "<group>"; };
+		7A548539280DBA3700338BF1 /* PersonSecondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSecondView.m; sourceTree = "<group>"; };
 		7A76047E2809C66F001BC1B1 /* CurrentNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsCell.h; sourceTree = "<group>"; };
 		7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentNewsCell.m; sourceTree = "<group>"; };
 		7A7604842809CED8001BC1B1 /* CurrentNewsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsTableView.h; sourceTree = "<group>"; };
@@ -304,6 +310,26 @@
 			path = "UIView+RoundCorner";
 			sourceTree = "<group>";
 		};
+		7A548534280DB95900338BF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A548535280DBA2A00338BF1 /* PersonFirstView.h */,
+				7A548536280DBA2A00338BF1 /* PersonFirstView.m */,
+				7A548538280DBA3700338BF1 /* PersonSecondView.h */,
+				7A548539280DBA3700338BF1 /* PersonSecondView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A54853B280DBD5E00338BF1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5244C45280466620034FC6A /* PersonViewController.h */,
+				B5244C46280466620034FC6A /* PersonViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7A7604622809C48D001BC1B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,8 +440,8 @@
 		B5244C44280465880034FC6A /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				B5244C45280466620034FC6A /* PersonViewController.h */,
-				B5244C46280466620034FC6A /* PersonViewController.m */,
+				7A548534280DB95900338BF1 /* View */,
+				7A54853B280DBD5E00338BF1 /* ViewController */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -687,11 +713,13 @@
 				7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */,
 				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
 				140102C32806F9F400AB27C2 /* WYNewsModel.m in Sources */,
+				7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */,
 				1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */,
 				140102B82806E59200AB27C2 /* SSRTextCycleCell.m in Sources */,
 				140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */,
 				7A7604A8280B1F6A001BC1B1 /* SchoolNewsTableView.m in Sources */,
 				B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */,
+				7A54853A280DBA3700338BF1 /* PersonSecondView.m in Sources */,
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
 				140102AF2806E4D200AB27C2 /* QuestionSelectView.m in Sources */,
