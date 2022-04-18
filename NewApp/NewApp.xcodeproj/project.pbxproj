@@ -20,13 +20,13 @@
 		142B7488280AE7A9008B6485 /* ZHSectionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B7487280AE7A9008B6485 /* ZHSectionNews.m */; };
 		142B7490280AF004008B6485 /* ZHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B748F280AF004008B6485 /* ZHNewsModel.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
-		7A5260732809B626000A06BC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260722809B626000A06BC /* BannerView.m */; };
 		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
 		7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */; };
 		7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604852809CED8001BC1B1 /* CurrentNewsTableView.m */; };
 		7A7604A8280B1F6A001BC1B1 /* SchoolNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604A7280B1F6A001BC1B1 /* SchoolNewsTableView.m */; };
 		7A7604AD280B2115001BC1B1 /* SchoolNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604AC280B2115001BC1B1 /* SchoolNewsCell.m */; };
 		7A7604B0280B2322001BC1B1 /* WaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604AF280B2322001BC1B1 /* WaterFlowView.m */; };
+		7A9DFD7C280DB50100BBA782 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9DFD7B280DB50100BBA782 /* BannerView.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
 		B5095395280B01E600E9D3FD /* SNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5095394280B01E600E9D3FD /* SNModel.m */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
@@ -76,8 +76,6 @@
 		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
-		7A5260712809B626000A06BC /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
-		7A5260722809B626000A06BC /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		7A5260BF2809BD0A000A06BC /* UIView+RoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
 		7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 		7A76047E2809C66F001BC1B1 /* CurrentNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsCell.h; sourceTree = "<group>"; };
@@ -90,6 +88,8 @@
 		7A7604AC280B2115001BC1B1 /* SchoolNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchoolNewsCell.m; sourceTree = "<group>"; };
 		7A7604AE280B2321001BC1B1 /* WaterFlowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowView.h; sourceTree = "<group>"; };
 		7A7604AF280B2322001BC1B1 /* WaterFlowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowView.m; sourceTree = "<group>"; };
+		7A9DFD7A280DB50100BBA782 /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		7A9DFD7B280DB50100BBA782 /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		917B21508948659933AFA0B1 /* Pods-NewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.debug.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5095393280B01E600E9D3FD /* SNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNModel.h; sourceTree = "<group>"; };
 		B5095394280B01E600E9D3FD /* SNModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNModel.m; sourceTree = "<group>"; };
@@ -289,8 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				7A7604B1280B2382001BC1B1 /* WaterFlowView */,
-				7A5260712809B626000A06BC /* BannerView.h */,
-				7A5260722809B626000A06BC /* BannerView.m */,
+				7A9DFD7A280DB50100BBA782 /* BannerView.h */,
+				7A9DFD7B280DB50100BBA782 /* BannerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -707,12 +707,12 @@
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
 				B54BE2E52801B0140095769A /* SchoolNewsViewController.m in Sources */,
+				7A9DFD7C280DB50100BBA782 /* BannerView.m in Sources */,
 				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
 				142B7488280AE7A9008B6485 /* ZHSectionNews.m in Sources */,
 				7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */,
 				140102C62806FA0900AB27C2 /* WYNews.m in Sources */,
 				142B7485280AE48B008B6485 /* ZHNews.m in Sources */,
-				7A5260732809B626000A06BC /* BannerView.m in Sources */,
 				140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
