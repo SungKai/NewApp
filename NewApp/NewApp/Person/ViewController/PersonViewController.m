@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) PersonFirstView *personFirstView;
 
+@property (nonatomic, strong) PersonSecondView *personSecondView;
+
 @end
 
 @implementation PersonViewController
@@ -22,6 +24,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.redColor;
     [self.view addSubview:self.personFirstView];
+    [self.view addSubview:self.personSecondView];
 }
 
 #pragma mark- 懒加载
@@ -31,6 +34,14 @@
         
     }
     return _personFirstView;
+}
+
+
+- (PersonSecondView *)personSecondView {
+    if (!_personSecondView) {
+        _personSecondView = [[PersonSecondView alloc] initWithSecondView];
+    }
+    return _personSecondView;
 }
 
 @end

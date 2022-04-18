@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor grayColor];
-        self.frame = CGRectMake(20, 100, ScreenWidth - 40, 200);
+        self.frame = CGRectMake(20, 80, ScreenWidth - 40, 200);
         [self applyRoundCorners:UIRectCornerAllCorners radius:20];
         
         [self addSubview:self.personName];

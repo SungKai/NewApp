@@ -11,6 +11,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PersonSecondView : UIView
 
+/// 消息
+@property (nonatomic, strong) UIButton *message;
+/// 收藏
+@property (nonatomic, strong) UIButton *collection;
+/// 退出
+@property (nonatomic, strong) UIButton *exit;
+
+- (instancetype)initWithSecondView;
+- (void)setPosition;
 @end
 
 NS_ASSUME_NONNULL_END
