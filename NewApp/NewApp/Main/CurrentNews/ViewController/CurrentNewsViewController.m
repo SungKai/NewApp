@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor systemYellowColor];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
@@ -44,6 +45,10 @@
     if (!_tableView) {
         _tableView = [[CurrentNewsTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor grayColor];
+        
+//        _tableView.estimatedRowHeight = 0;
+//        _tableView.estimatedSectionHeaderHeight = 0;
+//        _tableView.estimatedSectionFooterHeight = 0;
     }
     return _tableView;
 }
