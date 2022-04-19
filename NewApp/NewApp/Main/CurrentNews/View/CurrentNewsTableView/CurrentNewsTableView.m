@@ -8,6 +8,7 @@
 #import "CurrentNewsTableView.h"
 #import "CurrentNewsCell.h"
 
+
 @interface CurrentNewsTableView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @end
@@ -23,6 +24,7 @@
         self.showsVerticalScrollIndicator = NO;
         //不显示分割线
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
         self.WYNews = [NSMutableArray array];
     }
     return self;
@@ -41,10 +43,19 @@
     return 10;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return nil;
+}
+
 ///设置内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //设置无数据状态
     CurrentNewsCell *cell = [CurrentNewsCell CreateReusableCell:tableView];
+    
     //取出Model里面的数据，把相应数据给相应cell
 //    DataModel *dataModel = self.everydayNews[indexPath.section].stories[indexPath.row];
     

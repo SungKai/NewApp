@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 复用池
 + (SchoolNewsCell *)CreateReusableCell:(UITableView *)tableView;
+- (SchoolNewsCell *)cellWithInformation:(SchoolNewsCell *)cell WithTitleText:(NSString *)titleText WithHintText:(NSString *)hintText;
 
 @end
 
