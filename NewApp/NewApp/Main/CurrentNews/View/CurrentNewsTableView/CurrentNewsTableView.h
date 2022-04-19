@@ -6,9 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//V
 #import "CurrentNewsCell.h"
-
+//M
+#import "WYNewsModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol CurrentNewsTableViewDelegate <NSObject>
@@ -18,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CurrentNewsTableView : UITableView
 //代理
 @property (nonatomic, weak)id <CurrentNewsTableViewDelegate> currentDelegate;
+
+@property (nonatomic, strong) NSArray <WYNews *> *wydata;
 
 @end
 
