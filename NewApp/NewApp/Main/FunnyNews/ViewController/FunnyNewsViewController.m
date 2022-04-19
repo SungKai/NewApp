@@ -9,12 +9,19 @@
 
 //View
 #import "BannerView.h"
+#import "WaterFlowView.h"
+//M
+#import "ZHNewsModel.h"
 //Tool
 #import "UIView+RoundCorner.h"
 
 @interface FunnyNewsViewController ()
 
 @property (nonatomic, strong) BannerView *bannerView;
+
+@property (nonatomic, strong) WaterFlowView *waterFlowView;
+
+@property (nonatomic, strong) ZHNewsModel *zhNewsModel;
 
 @end
 
@@ -25,6 +32,17 @@
     self.view.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.bannerView];
+    //请求Latest数据
+    __weak typeof(self) weakSelf = self;
+    [self.zhNewsModel requestLastest:^{
+        //1.banner
+        weakSelf.bannerView.bannerZHData = weakSelf.zhNewsModel.topNewsModel;
+        //2.cell
+        weakSelf.waterFlowView.cellZHData = weakSelf.zhNewsModel.bodyNewsModel;
+
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
 }
 
 #pragma mark-懒加载
@@ -41,7 +59,13 @@
     }
     return _bannerView;
 }
-
+- (WaterFlowView *)waterFlowView {
+    if (!_waterFlowView) {
+        _waterFlowView = [[WaterFlowView alloc] init];
+        
+    }
+    return _waterFlowView;
+}
 /*
 #pragma mark - Navigation
 

@@ -6,10 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+//M
+#import "ZHNewsModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WaterFlowView : UICollectionView
+
+@property (nonatomic, strong) NSArray <ZHSectionNews *> *cellZHData;
 
 @end
 

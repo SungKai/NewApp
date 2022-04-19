@@ -29,11 +29,11 @@
     [self.view addSubview:self.tableView];
     //加载数据
     self.wyNewModel = [[WYNewsModel alloc] init];
+    __weak typeof(self) weakSelf = self;
     [self.wyNewModel
      requestSuccess:^{
         //传递数据给View
-//        NSLog(@"============%ld", self.wyNewModel.newsAry.count);
-        NSLog(@"aaaa");
+        weakSelf.tableView.wydata = weakSelf.wyNewModel.newsAry;
     }
      failure:^(NSError * _Nonnull error) {
     }];
@@ -47,10 +47,6 @@
     }
     return _tableView;
 }
-
-
-
-
 /*
 #pragma mark - Navigation
 

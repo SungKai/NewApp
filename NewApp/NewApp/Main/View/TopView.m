@@ -25,11 +25,16 @@
         [self addSubview:self.dayNumber];
         [self addSubview:self.line2];
         [self addSubview:self.dayDate];
-        
+        //放置位置
         [self setPosition];
+        //加载日期
+        self.monthNumber.text = [NSString stringWithFormat:@"%@月", [[NSDate today] month]];
+        self.dayNumber.text = [NSString stringWithFormat:@"%@日", [[NSDate today] day]];
+        self.dayDate.text = [NSString stringWithFormat:@"星期%@", [[NSDate today] weekTransformChinese]];
     }
     return self;
 }
+
 #pragma mark-懒加载
 - (UIButton *)personalBtn {
     if (!_personalBtn) {
@@ -66,7 +71,6 @@
 - (UILabel *)monthNumber {
     if (!_monthNumber) {
         _monthNumber = [[UILabel alloc] init];
-        _monthNumber.text = @"xx月";
         _monthNumber.textColor = [UIColor greenColor];
         _monthNumber.font = [UIFont systemFontOfSize:16];
     }
@@ -76,7 +80,6 @@
 - (UILabel *)dayNumber {
     if (!_dayNumber) {
         _dayNumber = [[UILabel alloc] init];
-        _dayNumber.text = @"xx日";
         _dayNumber.textColor = [UIColor greenColor];
         _dayNumber.font = [UIFont systemFontOfSize:16];
     }
@@ -96,7 +99,6 @@
 - (UILabel *)dayDate {
     if (!_dayDate) {
         _dayDate = [[UILabel alloc] init];
-        _dayDate.text = @"星期x";
         _dayDate.textColor = [UIColor greenColor];
         _dayDate.font = [UIFont systemFontOfSize:20];
     }

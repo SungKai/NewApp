@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//M
+#import "ZHNewsModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma mark - BannerViewDelegate
@@ -22,7 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //代理
 @property (nonatomic, weak) id <BannerViewDelegate> Banner_delegate;
-
+ 
+@property (nonatomic, strong) ZHSectionNews *bannerZHData;
 @end
 
 NS_ASSUME_NONNULL_END

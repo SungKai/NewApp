@@ -294,9 +294,9 @@
 		7A5260702809B616000A06BC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7A7604B1280B2382001BC1B1 /* WaterFlowView */,
 				7A9DFD7A280DB50100BBA782 /* BannerView.h */,
 				7A9DFD7B280DB50100BBA782 /* BannerView.m */,
+				7A7604B1280B2382001BC1B1 /* WaterFlowView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,8 +540,8 @@
 			children = (
 				B54BE2F22801B31D0095769A /* ViewController */,
 				B54BE2EB2801B2A00095769A /* View */,
-				B54BE2E82801B2470095769A /* FunnyNews */,
 				B54BE2E72801B2380095769A /* CurrentNews */,
+				B54BE2E82801B2470095769A /* FunnyNews */,
 				B54BE2E92801B2550095769A /* SchoolNews */,
 			);
 			path = Main;

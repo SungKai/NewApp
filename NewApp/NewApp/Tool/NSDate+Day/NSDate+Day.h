@@ -16,8 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)day;
 //得到今天的month
 - (NSString *)month;
-//翻译为中文
-- (NSString *)transformChinese;
+//得到今天的week英文
+- (NSString *)week;
+//月份翻译为中文
+- (NSString *)monthTransformChinese;
+//星期翻译为中文
+- (NSString *)weekTransformChinese;
 @end
 
 NS_ASSUME_NONNULL_END
