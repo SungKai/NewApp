@@ -37,6 +37,16 @@
     return 15;
 }
 
+///设置内容
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //设置无数据状态
+    SchoolNewsCell *cell = [SchoolNewsCell CreateReusableCell:tableView];
+    //取出Model里面的数据，把相应数据给相应cell
+//    DataModel *dataModel = self.everydayNews[indexPath.section].stories[indexPath.row];
+    
+//    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.hint WithImageURL:dataModel.imageURL];
+    return cell;
+}
 
 #pragma mark- <UITableViewDelegate>
 /// 设置cell高度
@@ -44,12 +54,7 @@
     return 80;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SchoolNewsCell *cell = [[SchoolNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"标题%ld", (long)indexPath.row];
-    return cell;
-    
-}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

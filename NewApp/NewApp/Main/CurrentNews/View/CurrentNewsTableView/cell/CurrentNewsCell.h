@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 复用池
 + (CurrentNewsCell *)CreateReusableCell:(UITableView *)tableView;
 
+- (CurrentNewsCell *)cellWithInformation:(CurrentNewsCell *)cell WithTitleText:(NSString *)titleText WithHintText:(NSString *)hintText WithImageURL:(NSString *)imageURL;
+
 @end
 
 NS_ASSUME_NONNULL_END

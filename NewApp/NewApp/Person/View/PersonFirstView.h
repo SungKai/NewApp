@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 签名
 @property (nonatomic, strong) UILabel *signature;
 /// 阅读时间
-@property (nonatomic, strong) UILabel *timeCalculate;
+//@property (nonatomic, strong) UILabel *timeCalculate;
 /// 头像
 @property (nonatomic, strong) UIImageView *headImgView;
 

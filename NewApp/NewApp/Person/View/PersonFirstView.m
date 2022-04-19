@@ -20,7 +20,7 @@
         
         [self addSubview:self.personName];
         [self addSubview:self.signature];
-        [self addSubview:self.timeCalculate];
+//        [self addSubview:self.timeCalculate];
         [self addSubview:self.headImgView];
         
         [self setPosition];
@@ -48,14 +48,14 @@
     return _signature;
 }
 
-- (UILabel *)timeCalculate {
-    if (!_timeCalculate) {
-        _timeCalculate = [[UILabel alloc] init];
-        _timeCalculate.text = @"已阅读xx时xx分";
-        _timeCalculate.font = [UIFont systemFontOfSize:20];
-    }
-    return _timeCalculate;
-}
+//- (UILabel *)timeCalculate {
+//    if (!_timeCalculate) {
+//        _timeCalculate = [[UILabel alloc] init];
+//        _timeCalculate.text = @"已阅读xx时xx分";
+//        _timeCalculate.font = [UIFont systemFontOfSize:20];
+//    }
+//    return _timeCalculate;
+//}
 
 - (UIImageView *)headImgView {
     if (!_headImgView) {
@@ -78,16 +78,16 @@
         make.top.equalTo(self.personName.mas_bottom);
     }];
     
-    [self.timeCalculate mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.signature);
-        make.top.equalTo(self.signature.mas_bottom).offset(30);
-    }];
-    
     [self.headImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-20);
         make.top.equalTo(self).offset(20);
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
+    
+    //    [self.timeCalculate mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.left.equalTo(self.signature);
+    //        make.top.equalTo(self.signature.mas_bottom).offset(30);
+    //    }];
 }
 
 

@@ -6,6 +6,7 @@
 //
 
 #import "CurrentNewsTableView.h"
+#import "CurrentNewsCell.h"
 
 @interface CurrentNewsTableView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
@@ -22,6 +23,7 @@
         self.showsVerticalScrollIndicator = NO;
         //不显示分割线
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.WYNews = [NSMutableArray array];
     }
     return self;
 }
@@ -35,22 +37,29 @@
 
 /// cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+//    return self.WYNews.count;
+    return 10;
 }
 
+///设置内容
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //设置无数据状态
+    CurrentNewsCell *cell = [CurrentNewsCell CreateReusableCell:tableView];
+    //取出Model里面的数据，把相应数据给相应cell
+//    DataModel *dataModel = self.everydayNews[indexPath.section].stories[indexPath.row];
+    
+//    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.hint WithImageURL:dataModel.imageURL];
+    return cell;
+}
 
 #pragma mark- <UITableViewDelegate>
 /// 设置cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 100;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CurrentNewsCell *cell = [[CurrentNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"标题%ld", (long)indexPath.row];
-    return cell;
-    
-}
+
+
 
 
 
