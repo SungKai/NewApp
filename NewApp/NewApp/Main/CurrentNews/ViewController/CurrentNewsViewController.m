@@ -35,8 +35,10 @@
      requestSuccess:^{
         //传递数据给View
         weakSelf.tableView.wydata = weakSelf.wyNewModel.newsAry;
+        NSLog(@"=========%ld", weakSelf.tableView.wydata.count);
     }
      failure:^(NSError * _Nonnull error) {
+        NSLog(@"🥀fail to wyNewModel");
     }];
 }
 

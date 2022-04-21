@@ -496,7 +496,6 @@
 				B5244C44280465880034FC6A /* Person */,
 				140102C92807011000AB27C2 /* BaseView */,
 				B5244C4E28053BB90034FC6A /* Tool */,
-				140102C82806FE2000AB27C2 /* WYNewsModel */,
 				142B7493280AF6DC008B6485 /* ZHNewsModel */,
 				B509538C280B014200E9D3FD /* SNModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
@@ -513,6 +512,7 @@
 			children = (
 				B54BE2EF2801B2E90095769A /* ViewController */,
 				7A7604622809C48D001BC1B1 /* View */,
+				140102C82806FE2000AB27C2 /* WYNewsModel */,
 			);
 			path = CurrentNews;
 			sourceTree = "<group>";

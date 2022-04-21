@@ -51,7 +51,7 @@
     formatter.dateFormat = @"E";
     NSString *week = [formatter stringFromDate:self];
     //设置数字数组
-    NSArray *englishArray = @[@"Mon", @"Tue",@"Wed", @"Thur", @"Fri", @"Sat", @"Sun"];
+    NSArray *englishArray = @[@"Mon", @"Tue",@"Wed", @"Thu", @"Fri", @"Sat", @"Sun"];
     NSArray *stringArray = @[@"一", @"二",@"三", @"四", @"五", @"六", @"七"];
     NSDictionary *dict = [NSDictionary dictionaryWithObjects:stringArray forKeys:englishArray];
     return [dict objectForKey:week];

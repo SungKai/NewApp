@@ -6,8 +6,10 @@
 //
 
 #import "CurrentNewsCell.h"
+//Tool
 #import "Masonry.h"
 #import "UIView+RoundCorner.h"
+#import <UIImageView+AFNetworking.h>
 @implementation CurrentNewsCell
 
 /// 初始化
@@ -22,8 +24,8 @@
         [self.contentView addSubview:self.imgView];
         [self setPosition];
         
-        self.layer.cornerRadius=5.0f;
-        self.layer.masksToBounds=YES;
+        self.layer.cornerRadius = 5.0f;
+        self.layer.masksToBounds = YES;
         [self setFrame:CGRectMake(0, 0, ScreenWidth, 0)];
     }
     return self;
@@ -59,6 +61,7 @@
     cell.titleLab.backgroundColor = [UIColor clearColor];
     cell.hintLab.backgroundColor = [UIColor clearColor];
 //    [cell calculateTitle:cell AndTitleText:titleText];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
     [cell setPosition];
     return cell;
 }
@@ -98,7 +101,7 @@
     }
     return _imgView;
 }
-
+//x-xcode-debug-views://33e0a80b0?DBGViewDebuggerLaunchSessionParameter=33e0a80b0 The layer is masked by a `CAShapeLayer` with a path that's a rect, a rounded-rect, or an ellipse. Instead, use an appropriately transformed container layer with `cornerRadius` and `masksToBounds` set.
 
 - (void)setPosition{
     //image

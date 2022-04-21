@@ -25,7 +25,7 @@
         //不显示分割线
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        self.WYNews = [NSMutableArray array];
+        self.wydata = [NSMutableArray array];
     }
     return self;
 }
@@ -39,7 +39,7 @@
 
 /// cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.WYNews.count;
+//    return self.wydata.count;
     return 10;
 }
 
@@ -55,11 +55,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //设置无数据状态
     CurrentNewsCell *cell = [CurrentNewsCell CreateReusableCell:tableView];
-    
-    //取出Model里面的数据，把相应数据给相应cell
-//    DataModel *dataModel = self.everydayNews[indexPath.section].stories[indexPath.row];
-    
-//    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.hint WithImageURL:dataModel.imageURL];
+//    NSLog(@"-------%ld", self.wydata.count);
+//    //取出Model里面的数据，把相应数据给相应cell
+//    WYNews *dataModel = self.wydata[indexPath.row];
+//
+//    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.digest WithImageURL:dataModel.imgURL];
     return cell;
 }
 
