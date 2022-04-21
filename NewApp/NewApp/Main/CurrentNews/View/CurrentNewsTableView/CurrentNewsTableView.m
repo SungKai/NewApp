@@ -24,8 +24,8 @@
         self.showsVerticalScrollIndicator = NO;
         //不显示分割线
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
-        self.wydata = [NSMutableArray array];
+        self.bounces = NO;
+//        self.wydata = [[NSArray alloc] init];
     }
     return self;
 }
@@ -39,8 +39,7 @@
 
 /// cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.wydata.count;
-    return 10;
+    return self.wydata.count;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -55,12 +54,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //设置无数据状态
     CurrentNewsCell *cell = [CurrentNewsCell CreateReusableCell:tableView];
-//    NSLog(@"-------%ld", self.wydata.count);
-//    //取出Model里面的数据，把相应数据给相应cell
-//    WYNews *dataModel = self.wydata[indexPath.row];
-//
-//    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.digest WithImageURL:dataModel.imgURL];
-    return cell;
+    NSLog(@"-------%ld", self.wydata.count);  //0
+    //取出Model里面的数据，把相应数据给相应cell
+    WYNews *dataModel = self.wydata[indexPath.row];
+
+    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.digest WithImageURL:dataModel.imgURL];
+//    return cell;
 }
 
 #pragma mark- <UITableViewDelegate>
@@ -69,7 +68,13 @@
     return 100;
 }
 
-
+#pragma mark - Getter
+- (NSArray<WYNews *> *)wydata {
+    if (!_wydata) {
+        _wydata = [[NSArray<WYNews *> alloc] init];
+    }
+    return _wydata;
+}
 
 
 

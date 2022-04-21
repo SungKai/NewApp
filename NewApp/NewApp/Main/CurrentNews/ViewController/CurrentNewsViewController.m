@@ -26,22 +26,26 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor systemYellowColor];
-    // Do any additional setup after loading the view.
+   
     [self.view addSubview:self.tableView];
-    //加载数据
-    self.wyNewModel = [[WYNewsModel alloc] init];
+//    //加载数据
+//    self.wyNewModel = [[WYNewsModel alloc] init];
+    [self loadNewData];
+}
+//加载数据
+- (void)loadNewData {
     __weak typeof(self) weakSelf = self;
     [self.wyNewModel
      requestSuccess:^{
         //传递数据给View
         weakSelf.tableView.wydata = weakSelf.wyNewModel.newsAry;
         NSLog(@"=========%ld", weakSelf.tableView.wydata.count);
+        //刷新
+        [self.tableView reloadData];
     }
      failure:^(NSError * _Nonnull error) {
-        NSLog(@"🥀fail to wyNewModel");
     }];
 }
-
 #pragma mark-懒加载
 - (CurrentNewsTableView *)tableView {
     if (!_tableView) {
@@ -53,6 +57,13 @@
 //        _tableView.estimatedSectionFooterHeight = 0;
     }
     return _tableView;
+}
+//wyNewModel
+- (WYNewsModel *)wyNewModel {
+    if (!_wyNewModel) {
+        _wyNewModel = [[WYNewsModel<UITableViewDataSource> alloc] init];
+    }
+    return _wyNewModel;
 }
 /*
 #pragma mark - Navigation

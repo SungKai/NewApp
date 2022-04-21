@@ -72,10 +72,8 @@
 - (UILabel *)titleLab {
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] init];
-        _titleLab.textColor = [UIColor blackColor];
+        _titleLab.backgroundColor = [UIColor lightGrayColor];
         _titleLab.font = [UIFont systemFontOfSize:26];
-        
-        _titleLab.text = @"xinwen";
     }
     return _titleLab;
 }
@@ -83,10 +81,8 @@
 - (UILabel *)hintLab {
     if (!_hintLab) {
         _hintLab = [[UILabel alloc] init];
-        _hintLab.textColor = [UIColor blackColor];
-    
+        _hintLab.backgroundColor = [UIColor lightGrayColor];
         _hintLab.font = [UIFont systemFontOfSize:15];
-        _hintLab.text = @"texttexthinthint";
     }
     return _hintLab;
 }
@@ -94,7 +90,6 @@
 - (UIImageView *)imgView{
     if (!_imgView){
         _imgView = [[UIImageView alloc]init];
-        _imgView.backgroundColor = [UIColor grayColor];
         _imgView.layer.masksToBounds = YES;
         _imgView.layer.cornerRadius = 4;
         _imgView.backgroundColor = [UIColor lightGrayColor];
