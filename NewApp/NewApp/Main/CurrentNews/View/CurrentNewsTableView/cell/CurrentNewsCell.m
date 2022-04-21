@@ -25,7 +25,7 @@
         [self.contentView addSubview:self.imgView];
         [self setPosition];
         
-        self.layer.cornerRadius = 10.0f;
+        self.layer.cornerRadius = 8.0f;
         self.layer.masksToBounds = YES;
         [self setFrame:CGRectMake(0, 0, ScreenWidth, 0)];
     }
@@ -49,9 +49,9 @@
 //设置分割线的宽度和高度
 -(void)setFrame:(CGRect)frame
 {
-  frame.origin.x =2;//这里间距为10可以根据自己的情况调整
+  frame.origin.x = 2;//这里间距为10可以根据自己的情况调整
   frame.size.width -=frame.origin.x;
-  frame.size.height -= 5 * frame.origin.x;
+  frame.size.height -= 3 * frame.origin.x;
   [super setFrame:frame];
 }
 
@@ -61,7 +61,7 @@
     cell.hintLab.text = hintText;
     cell.titleLab.backgroundColor = [UIColor clearColor];
     cell.hintLab.backgroundColor = [UIColor clearColor];
-//    [cell calculateTitle:cell AndTitleText:titleText];
+    [cell calculateTitle:cell AndTitleText:titleText];
     [cell.imgView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
     [cell setPosition];
     return cell;
@@ -69,11 +69,11 @@
 //设置title行数
 - (void)calculateTitle:(CurrentNewsCell *)cell AndTitleText:(NSString *)str{
     CGRect tempTitleFrame = cell.titleLab.frame;
+    CGFloat width =  ScreenWidth - 8 - 100 - 10 - 10;
     //得到文字相应的size
-//    tempTitleFrame.size = [cell.titleLab MaxLabelWidth:str FontOfSize:20 MaxWidth:WIDTH  MaxNumberOfLine:2 Interval:3];
-    tempTitleFrame.origin = CGPointMake(20, 15);
+    tempTitleFrame.size = [cell.titleLab MaxLabelWidth:str FontOfSize:20 MaxWidth:width  MaxNumberOfLine:2 Interval:3];
+    tempTitleFrame.origin = CGPointMake(10, 15);
     cell.titleLab.frame = tempTitleFrame;
-    cell.hintLab.frame = CGRectMake(cell.titleLab.frame.origin.x, cell.titleLab.frame.origin.y + cell.titleLab.frame.size.height + 3, cell.titleLab.frame.size.width, 16);
 }
 
 
@@ -100,19 +100,18 @@
     if (!_imgView){
         _imgView = [[UIImageView alloc]init];
         _imgView.layer.masksToBounds = YES;
-        _imgView.layer.cornerRadius = 12;
+        _imgView.layer.cornerRadius = 5;
         _imgView.backgroundColor = [UIColor lightGrayColor];
     }
     return _imgView;
 }
-//x-xcode-debug-views://33e0a80b0?DBGViewDebuggerLaunchSessionParameter=33e0a80b0 The layer is masked by a `CAShapeLayer` with a path that's a rect, a rounded-rect, or an ellipse. Instead, use an appropriately transformed container layer with `cornerRadius` and `masksToBounds` set.
 
 - (void)setPosition{
     //image
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView).offset(-10);
+        make.right.equalTo(self.contentView).offset(-8);
         make.centerY.equalTo(self.contentView);
-        make.size.mas_equalTo(CGSizeMake(80, 80));
+        make.size.mas_equalTo(CGSizeMake(100, 87));
     }];
     
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -125,7 +124,7 @@
     [self.hintLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.titleLab);
         make.right.equalTo(self.titleLab);
-        make.top.equalTo(self.titleLab.mas_bottom).offset(5);
+        make.top.equalTo(self.titleLab.mas_bottom).offset(10);
     }];
 }
 

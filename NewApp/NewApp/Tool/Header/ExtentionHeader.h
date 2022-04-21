@@ -18,6 +18,7 @@
 
 #define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
 
+//#define WIDTH self.contentView.frame.size.width - 
 #pragma mark - Font
 
 #define PingFangSCSemibold @"PingFangSC-Semibold"

@@ -24,8 +24,6 @@
         self.showsVerticalScrollIndicator = NO;
         //不显示分割线
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.bounces = NO;
-//        self.wydata = [[NSArray alloc] init];
     }
     return self;
 }

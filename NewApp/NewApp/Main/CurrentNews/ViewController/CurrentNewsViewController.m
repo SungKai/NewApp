@@ -28,8 +28,15 @@
     self.view.backgroundColor = [UIColor systemYellowColor];
    
     [self.view addSubview:self.tableView];
-//    //加载数据
-//    self.wyNewModel = [[WYNewsModel alloc] init];
+    //下拉刷新
+    UIRefreshControl *control = [[UIRefreshControl alloc]init];
+    [control addTarget:self action:@selector(refreshTableView) forControlEvents:UIControlEventValueChanged];
+    self.tableView.refreshControl = control;
+    [self loadNewData];
+}
+#pragma mark - Method
+//下拉刷新
+- (void)refreshTableView{
     [self loadNewData];
 }
 //加载数据
@@ -37,9 +44,11 @@
     __weak typeof(self) weakSelf = self;
     [self.wyNewModel
      requestSuccess:^{
+        if ([self.tableView.refreshControl isRefreshing]) {
+            [self.tableView.refreshControl endRefreshing];
+        }
         //传递数据给View
         weakSelf.tableView.wydata = weakSelf.wyNewModel.newsAry;
-        NSLog(@"=========%ld", weakSelf.tableView.wydata.count);
         //刷新
         [self.tableView reloadData];
     }
@@ -50,7 +59,7 @@
 - (CurrentNewsTableView *)tableView {
     if (!_tableView) {
         _tableView = [[CurrentNewsTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor grayColor];
+        _tableView.backgroundColor = [UIColor lightGrayColor];
         
 //        _tableView.estimatedRowHeight = 0;
 //        _tableView.estimatedSectionHeaderHeight = 0;
