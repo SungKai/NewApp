@@ -59,13 +59,12 @@
     WYNews *dataModel = self.wydata[indexPath.row];
 
     return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.digest WithImageURL:dataModel.imgURL];
-//    return cell;
 }
 
 #pragma mark- <UITableViewDelegate>
 /// 设置cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 110;
 }
 
 #pragma mark - Getter

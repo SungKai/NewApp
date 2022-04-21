@@ -10,6 +10,7 @@
 #import "Masonry.h"
 #import "UIView+RoundCorner.h"
 #import <UIImageView+AFNetworking.h>
+#import "UILabel+AutoHeight.h"
 @implementation CurrentNewsCell
 
 /// 初始化
@@ -24,7 +25,7 @@
         [self.contentView addSubview:self.imgView];
         [self setPosition];
         
-        self.layer.cornerRadius = 5.0f;
+        self.layer.cornerRadius = 10.0f;
         self.layer.masksToBounds = YES;
         [self setFrame:CGRectMake(0, 0, ScreenWidth, 0)];
     }
@@ -61,11 +62,19 @@
     cell.titleLab.backgroundColor = [UIColor clearColor];
     cell.hintLab.backgroundColor = [UIColor clearColor];
 //    [cell calculateTitle:cell AndTitleText:titleText];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
+    [cell.imgView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"defaultImage"]];
     [cell setPosition];
     return cell;
 }
-
+//设置title行数
+- (void)calculateTitle:(CurrentNewsCell *)cell AndTitleText:(NSString *)str{
+    CGRect tempTitleFrame = cell.titleLab.frame;
+    //得到文字相应的size
+//    tempTitleFrame.size = [cell.titleLab MaxLabelWidth:str FontOfSize:20 MaxWidth:WIDTH  MaxNumberOfLine:2 Interval:3];
+    tempTitleFrame.origin = CGPointMake(20, 15);
+    cell.titleLab.frame = tempTitleFrame;
+    cell.hintLab.frame = CGRectMake(cell.titleLab.frame.origin.x, cell.titleLab.frame.origin.y + cell.titleLab.frame.size.height + 3, cell.titleLab.frame.size.width, 16);
+}
 
 
 #pragma mark- 懒加载
@@ -73,7 +82,7 @@
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] init];
         _titleLab.backgroundColor = [UIColor lightGrayColor];
-        _titleLab.font = [UIFont systemFontOfSize:26];
+        _titleLab.font = [UIFont boldSystemFontOfSize:20];
     }
     return _titleLab;
 }
@@ -91,7 +100,7 @@
     if (!_imgView){
         _imgView = [[UIImageView alloc]init];
         _imgView.layer.masksToBounds = YES;
-        _imgView.layer.cornerRadius = 4;
+        _imgView.layer.cornerRadius = 12;
         _imgView.backgroundColor = [UIColor lightGrayColor];
     }
     return _imgView;
@@ -101,19 +110,21 @@
 - (void)setPosition{
     //image
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView).offset(-18);
+        make.right.equalTo(self.contentView).offset(-10);
         make.centerY.equalTo(self.contentView);
-        make.size.mas_equalTo(CGSizeMake(76, 76));
+        make.size.mas_equalTo(CGSizeMake(80, 80));
     }];
     
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(20);
+        make.left.equalTo(self.contentView).offset(10);
+        make.right.equalTo(self.imgView.mas_left).offset(-10);
         make.top.equalTo(self.contentView).offset(15);
         
     }];
     
     [self.hintLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.titleLab);
+        make.right.equalTo(self.titleLab);
         make.top.equalTo(self.titleLab.mas_bottom).offset(5);
     }];
 }

@@ -16,10 +16,10 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:self.titleLab];
-        [self.contentView addSubview:self.hintLab];
+//        [self.contentView addSubview:self.hintLab];
         [self setPosition];
         
-        self.layer.cornerRadius=5.0f;
+        self.layer.cornerRadius=10.0f;
         self.layer.masksToBounds=YES;
         [self setFrame:CGRectMake(0, 0, ScreenWidth, 0)];
     }
@@ -32,15 +32,15 @@
     SchoolNewsCell *schoolCell = [tableView dequeueReusableCellWithIdentifier:identyfing];
     if (!schoolCell) {
         schoolCell = [[SchoolNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identyfing];
-        schoolCell.titleLab.backgroundColor = [UIColor redColor];
-        schoolCell.hintLab.backgroundColor = [UIColor systemGreenColor];
+        schoolCell.titleLab.backgroundColor = [UIColor lightGrayColor];
+//        schoolCell.hintLab.backgroundColor = [UIColor systemGreenColor];
     }
     return schoolCell;
 }
 
 - (SchoolNewsCell *)cellWithInformation:(SchoolNewsCell *)cell WithTitleText:(NSString *)titleText WithHintText:(NSString *)hintText {
     cell.titleLab.text = titleText;
-    cell.hintLab.text = hintText;
+//    cell.hintLab.text = hintText;
     cell.titleLab.backgroundColor = [UIColor clearColor];
     cell.hintLab.backgroundColor = [UIColor clearColor];
 
@@ -61,24 +61,23 @@
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] init];
         _titleLab.textColor = [UIColor blackColor];
-        _titleLab.font = [UIFont systemFontOfSize:26];
-        
-        _titleLab.text = @"xinwenbiaoti";
+        _titleLab.font = [UIFont boldSystemFontOfSize:26];
+        _titleLab.text = @"教务在线";
     }
     return _titleLab;
 }
 
-- (UILabel *)hintLab {
-    if (!_hintLab) {
-        _hintLab = [[UILabel alloc] init];
-        _hintLab.textColor = [UIColor blackColor];
-        _hintLab.textColor = [UIColor systemGrayColor];
-        _hintLab.font = [UIFont systemFontOfSize:15];
-        
-        _hintLab.text = @"hintTitle";
-    }
-    return _hintLab;
-}
+//- (UILabel *)hintLab {
+//    if (!_hintLab) {
+//        _hintLab = [[UILabel alloc] init];
+//        _hintLab.textColor = [UIColor blackColor];
+//        _hintLab.textColor = [UIColor systemGrayColor];
+//        _hintLab.font = [UIFont systemFontOfSize:15];
+//
+//        _hintLab.text = @"hintTitle";
+//    }
+//    return _hintLab;
+//}
 
 - (void)setPosition {
     
@@ -87,10 +86,10 @@
         make.top.equalTo(self.contentView).offset(15);
     }];
     
-    [self.hintLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.titleLab);
-        make.top.equalTo(self.titleLab.mas_bottom).offset(5);
-    }];
+//    [self.hintLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.titleLab);
+//        make.top.equalTo(self.titleLab.mas_bottom).offset(5);
+//    }];
 }
 
 @end

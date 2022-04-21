@@ -34,7 +34,7 @@
 
 /// cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+    return 2;
 }
 
 ///设置内容
