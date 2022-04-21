@@ -9,7 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol WaterFlowViewDelegate <NSObject>
+
+@end
+
+
 @interface WaterFlowView : UICollectionView
+
+
+@property (nonatomic, weak)id <WaterFlowViewDelegate> waterFlowDelegate;
 
 @end
 

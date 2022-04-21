@@ -6,6 +6,9 @@
 //
 
 #import "FunnyNewsViewController.h"
+#import "WaterFlowView.h"
+#import "WaterFlowCell.h"
+#import "WaterFlowLayout.h"
 
 //View
 #import "BannerView.h"
@@ -14,7 +17,11 @@
 
 @interface FunnyNewsViewController ()
 
+/// Banner
 @property (nonatomic, strong) BannerView *bannerView;
+
+///瀑布布局
+@property (nonatomic, strong) WaterFlowView *waterFlowView;
 
 @end
 
@@ -25,6 +32,10 @@
     self.view.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.bannerView];
+    [self.view addSubview:self.waterFlowView];
+    
+    //注册单元格
+    [self.waterFlowView registerClass:[WaterFlowCell class] forCellWithReuseIdentifier:@"cell"];
 }
 
 #pragma mark-懒加载
@@ -41,6 +52,21 @@
     }
     return _bannerView;
 }
+
+//- (WaterFlowView *)waterFlowView {
+//    if (!_waterFlowView) {
+//        WaterFlowLayout *layout = [[WaterFlowLayout alloc] init];
+////        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//        _waterFlowView = [[WaterFlowView alloc] initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:layout];
+//        _waterFlowView.backgroundColor = [UIColor systemPinkColor];
+//        _waterFlowView.delegate = self;
+//        _waterFlowView.dataSource = self;
+//
+//    }
+//    return _waterFlowView;
+//}
+
+
 
 /*
 #pragma mark - Navigation

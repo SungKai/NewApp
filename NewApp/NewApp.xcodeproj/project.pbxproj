@@ -23,6 +23,8 @@
 		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
 		7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548536280DBA2A00338BF1 /* PersonFirstView.m */; };
 		7A54853A280DBA3700338BF1 /* PersonSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548539280DBA3700338BF1 /* PersonSecondView.m */; };
+		7A54853E280FC46700338BF1 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54853D280FC46600338BF1 /* WaterFlowLayout.m */; };
+		7A548542280FC73200338BF1 /* WaterFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548541280FC73200338BF1 /* WaterFlowCell.m */; };
 		7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */; };
 		7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604852809CED8001BC1B1 /* CurrentNewsTableView.m */; };
 		7A7604A8280B1F6A001BC1B1 /* SchoolNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604A7280B1F6A001BC1B1 /* SchoolNewsTableView.m */; };
@@ -84,6 +86,10 @@
 		7A548536280DBA2A00338BF1 /* PersonFirstView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonFirstView.m; sourceTree = "<group>"; };
 		7A548538280DBA3700338BF1 /* PersonSecondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSecondView.h; sourceTree = "<group>"; };
 		7A548539280DBA3700338BF1 /* PersonSecondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSecondView.m; sourceTree = "<group>"; };
+		7A54853C280FC46600338BF1 /* WaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
+		7A54853D280FC46600338BF1 /* WaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
+		7A548540280FC73200338BF1 /* WaterFlowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowCell.h; sourceTree = "<group>"; };
+		7A548541280FC73200338BF1 /* WaterFlowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowCell.m; sourceTree = "<group>"; };
 		7A76047E2809C66F001BC1B1 /* CurrentNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsCell.h; sourceTree = "<group>"; };
 		7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentNewsCell.m; sourceTree = "<group>"; };
 		7A7604842809CED8001BC1B1 /* CurrentNewsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsTableView.h; sourceTree = "<group>"; };
@@ -330,6 +336,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		7A54853F280FC71E00338BF1 /* WaterFlowCell */ = {
+			isa = PBXGroup;
+			children = (
+				7A548540280FC73200338BF1 /* WaterFlowCell.h */,
+				7A548541280FC73200338BF1 /* WaterFlowCell.m */,
+			);
+			path = WaterFlowCell;
+			sourceTree = "<group>";
+		};
 		7A7604622809C48D001BC1B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,8 +402,11 @@
 		7A7604B1280B2382001BC1B1 /* WaterFlowView */ = {
 			isa = PBXGroup;
 			children = (
+				7A54853F280FC71E00338BF1 /* WaterFlowCell */,
 				7A7604AE280B2321001BC1B1 /* WaterFlowView.h */,
 				7A7604AF280B2322001BC1B1 /* WaterFlowView.m */,
+				7A54853C280FC46600338BF1 /* WaterFlowLayout.h */,
+				7A54853D280FC46600338BF1 /* WaterFlowLayout.m */,
 			);
 			path = WaterFlowView;
 			sourceTree = "<group>";
@@ -708,9 +726,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A7604B0280B2322001BC1B1 /* WaterFlowView.m in Sources */,
+				7A54853E280FC46700338BF1 /* WaterFlowLayout.m in Sources */,
 				B5244C47280466620034FC6A /* PersonViewController.m in Sources */,
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */,
+				7A548542280FC73200338BF1 /* WaterFlowCell.m in Sources */,
 				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
 				140102C32806F9F400AB27C2 /* WYNewsModel.m in Sources */,
 				7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */,
