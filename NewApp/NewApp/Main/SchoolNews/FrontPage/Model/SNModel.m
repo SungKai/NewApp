@@ -9,4 +9,8 @@
 
 @implementation SNModel
 
+- (instancetype)SNModelWithDic:(NSDictionary *)dic {
+    [self setValuesForKeysWithDictionary:dic];
+    return self;
+}
 @end

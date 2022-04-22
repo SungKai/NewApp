@@ -33,6 +33,8 @@
 		B5095395280B01E600E9D3FD /* SNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5095394280B01E600E9D3FD /* SNModel.m */; };
 		B50953AB2811372000E9D3FD /* schoolNews.plist in Resources */ = {isa = PBXBuildFile; fileRef = B50953AA2811372000E9D3FD /* schoolNews.plist */; };
 		B50953AE28113DEB00E9D3FD /* UILabel+AutoHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B50953AC28113DEA00E9D3FD /* UILabel+AutoHeight.m */; };
+		B50953B82811906000E9D3FD /* SNNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50953B72811906000E9D3FD /* SNNextViewController.m */; };
+		B50953BD281190EC00E9D3FD /* SNNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50953BC281190EC00E9D3FD /* SNNextView.m */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
 		B5244C40280462570034FC6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3F280462570034FC6A /* LoginViewController.m */; };
 		B5244C47280466620034FC6A /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C46280466620034FC6A /* PersonViewController.m */; };
@@ -104,6 +106,10 @@
 		B50953AA2811372000E9D3FD /* schoolNews.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = schoolNews.plist; path = ../../SchoolNewsData/schoolNews.plist; sourceTree = "<group>"; };
 		B50953AC28113DEA00E9D3FD /* UILabel+AutoHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AutoHeight.m"; sourceTree = "<group>"; };
 		B50953AD28113DEA00E9D3FD /* UILabel+AutoHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AutoHeight.h"; sourceTree = "<group>"; };
+		B50953B62811906000E9D3FD /* SNNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNNextViewController.h; sourceTree = "<group>"; };
+		B50953B72811906000E9D3FD /* SNNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNextViewController.m; sourceTree = "<group>"; };
+		B50953BB281190EC00E9D3FD /* SNNextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNNextView.h; sourceTree = "<group>"; };
+		B50953BC281190EC00E9D3FD /* SNNextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNextView.m; sourceTree = "<group>"; };
 		B5244C3B2804624A0034FC6A /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		B5244C3C2804624A0034FC6A /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		B5244C3E280462570034FC6A /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -406,15 +412,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B509538C280B014200E9D3FD /* SNModel */ = {
-			isa = PBXGroup;
-			children = (
-				B5095393280B01E600E9D3FD /* SNModel.h */,
-				B5095394280B01E600E9D3FD /* SNModel.m */,
-			);
-			path = SNModel;
-			sourceTree = "<group>";
-		};
 		B50953AF28113DF500E9D3FD /* UILabel+AutoHeight */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +419,52 @@
 				B50953AC28113DEA00E9D3FD /* UILabel+AutoHeight.m */,
 			);
 			path = "UILabel+AutoHeight";
+			sourceTree = "<group>";
+		};
+		B50953B028117EEE00E9D3FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5095393280B01E600E9D3FD /* SNModel.h */,
+				B5095394280B01E600E9D3FD /* SNModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B50953B428118FF700E9D3FD /* FrontPage */ = {
+			isa = PBXGroup;
+			children = (
+				B54BE2F12801B3150095769A /* ViewController */,
+				7A7604A5280B1F49001BC1B1 /* View */,
+				B50953B028117EEE00E9D3FD /* Model */,
+			);
+			path = FrontPage;
+			sourceTree = "<group>";
+		};
+		B50953B52811903000E9D3FD /* NextPage */ = {
+			isa = PBXGroup;
+			children = (
+				B50953B92811906500E9D3FD /* Controller */,
+				B50953BA281190C200E9D3FD /* View */,
+			);
+			path = NextPage;
+			sourceTree = "<group>";
+		};
+		B50953B92811906500E9D3FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B50953B62811906000E9D3FD /* SNNextViewController.h */,
+				B50953B72811906000E9D3FD /* SNNextViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B50953BA281190C200E9D3FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B50953BB281190EC00E9D3FD /* SNNextView.h */,
+				B50953BC281190EC00E9D3FD /* SNNextView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5244C3A280462280034FC6A /* Login */ = {
@@ -512,7 +555,6 @@
 				140102C92807011000AB27C2 /* BaseView */,
 				B5244C4E28053BB90034FC6A /* Tool */,
 				142B7493280AF6DC008B6485 /* ZHNewsModel */,
-				B509538C280B014200E9D3FD /* SNModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				B54BE2D22801AF110095769A /* Info.plist */,
@@ -545,8 +587,8 @@
 		B54BE2E92801B2550095769A /* SchoolNews */ = {
 			isa = PBXGroup;
 			children = (
-				B54BE2F12801B3150095769A /* ViewController */,
-				7A7604A5280B1F49001BC1B1 /* View */,
+				B50953B428118FF700E9D3FD /* FrontPage */,
+				B50953B52811903000E9D3FD /* NextPage */,
 			);
 			path = SchoolNews;
 			sourceTree = "<group>";
@@ -752,6 +794,7 @@
 				B54BE2EE2801B2D60095769A /* NavView.m in Sources */,
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
+				B50953BD281190EC00E9D3FD /* SNNextView.m in Sources */,
 				B54BE2E52801B0140095769A /* SchoolNewsViewController.m in Sources */,
 				7A9DFD7C280DB50100BBA782 /* BannerView.m in Sources */,
 				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
@@ -759,6 +802,7 @@
 				7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */,
 				140102C62806FA0900AB27C2 /* WYNews.m in Sources */,
 				142B7485280AE48B008B6485 /* ZHNews.m in Sources */,
+				B50953B82811906000E9D3FD /* SNNextViewController.m in Sources */,
 				140102AB2806E4C500AB27C2 /* QuestionButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

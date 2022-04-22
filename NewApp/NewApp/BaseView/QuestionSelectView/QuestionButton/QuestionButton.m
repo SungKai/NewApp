@@ -12,7 +12,7 @@
 
 @implementation QuestionButton
 
-#pragma mark - Lazy
+#pragma mark - Getter
 
 - (NSString *)title {
     return self.titleLabel.text;

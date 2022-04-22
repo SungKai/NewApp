@@ -16,7 +16,7 @@
     NSInteger count = originSize.width / maxWidth + 1;
     CGFloat width = 0;
     //大于最大行数
-    if (count > maxNumOfLine){
+    if (count > maxNumOfLine && maxNumOfLine != -1){
         count = maxNumOfLine;
     }
     self.numberOfLines = count;

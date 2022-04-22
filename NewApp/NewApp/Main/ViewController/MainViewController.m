@@ -19,7 +19,8 @@
 
 @interface MainViewController () <
     UIScrollViewDelegate,
-    NavViewDelegate
+    NavViewDelegate,
+    SchoolNewsViewControllerDelegete
 >
 
 @property (nonatomic, strong) CurrentNewsViewController *curVC;
@@ -125,6 +126,7 @@
 - (SchoolNewsViewController *)schoolVC {
     if (!_schoolVC) {
         _schoolVC = [[SchoolNewsViewController alloc] init];
+        _schoolVC.SchoolNewsViewControllerDelegete = self;
     }
     return _schoolVC;
 }
@@ -195,5 +197,13 @@
         self.scrollView.contentOffset = CGPointMake(ScreenWidth * tag, 0);
     }];
 }
-
+// MARK:  <SchoolNewsViewControllerDelegete>
+//教务新闻页跳转到教务新闻详情页
+- (void)jumpToNextVC:(SNNextViewController *)snNextVC {
+    [self.navigationController pushViewController:snNextVC animated:YES];
+}
+///从nextVC跳回frontVC
+- (void)jumpToFrontVC {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

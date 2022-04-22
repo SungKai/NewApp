@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *text;
 
+- (instancetype)SNModelWithDic:(NSDictionary *)dic;
+
 @end
 
 NS_ASSUME_NONNULL_END

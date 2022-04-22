@@ -25,7 +25,7 @@
 }
 
 
-#pragma mark - lazy
+#pragma mark - Getter
 //currentBtn
 - (UIButton *)currentBtn {
     if (!_currentBtn) {
