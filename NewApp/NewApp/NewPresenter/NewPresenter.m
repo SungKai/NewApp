@@ -22,6 +22,7 @@
     if (self) {
         [[UITabBar appearance] setBackgroundColor:[UIColor colorNamed:@"247_247_247"]];
         self.viewControllers = @[self.mainNav, self.personNav];
+        self.tabBar.tintColor = [UIColor colorNamed:@"254_149_87"];
     }
     return self;
 }
@@ -45,6 +46,7 @@
         _mainVC.title = @"首页";
         _mainVC.tabBarItem.title = @"首页";
         _mainVC.tabBarItem.image = [UIImage imageNamed:@"首页"];
+        _mainVC.tabBarItem.selectedImage = [UIImage imageNamed:@"首页_selected"];
     }
     return _mainVC;
 }
@@ -61,6 +63,7 @@
         _personVC.title = @"个人";
         _personVC.tabBarItem.title = @"个人";
         _personVC.tabBarItem.image = [UIImage imageNamed:@"个人"];
+        _personVC.tabBarItem.selectedImage = [UIImage imageNamed:@"个人_selected"];
     }
     return _personVC;
 }
