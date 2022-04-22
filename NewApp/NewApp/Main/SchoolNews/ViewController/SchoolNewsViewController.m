@@ -29,7 +29,7 @@
 - (SchoolNewsTableView *)tableView {
     if (!_tableView) {
         _tableView = [[SchoolNewsTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor systemGreenColor];
+        _tableView.backgroundColor = [UIColor colorNamed:@"237_237_237"];
     }
     return _tableView;
 }

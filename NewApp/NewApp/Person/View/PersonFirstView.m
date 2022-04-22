@@ -14,7 +14,7 @@
 - (instancetype)initWithFirstView {
     self = [super init];
     if (self) {
-        self.backgroundColor = [UIColor grayColor];
+        self.backgroundColor = [UIColor colorNamed:@"237_237_237"];
         self.frame = CGRectMake(20, 80, ScreenWidth - 40, 200);
         [self applyRoundCorners:UIRectCornerAllCorners radius:20];
         
@@ -33,7 +33,7 @@
     if (!_personName) {
         _personName = [[UILabel alloc] init];
         _personName.text = @"NAME";
-        _personName.textColor = [UIColor whiteColor];
+        _personName.textColor = [UIColor colorNamed:@"51_51_51"];
         _personName.font = [UIFont boldSystemFontOfSize:45];
     }
     return _personName;
@@ -43,7 +43,7 @@
     if (!_signature) {
         _signature = [[UILabel alloc] init];
         _signature.text = @"或许这里有一段励志语";
-        _signature.textColor = [UIColor whiteColor];
+        _signature.textColor = [UIColor colorNamed:@"149_158_165"];
     }
     return _signature;
 }
@@ -60,9 +60,8 @@
 - (UIImageView *)headImgView {
     if (!_headImgView) {
         _headImgView = [[UIImageView alloc] init];
-        _headImgView.backgroundColor = [UIColor colorWithRed:0.7 green:0.9 blue:1 alpha:1];
+        _headImgView.backgroundColor = [UIColor colorNamed:@"254_149_87"];
         _headImgView.layer.cornerRadius = 50;
-        
     }
     return _headImgView;
 }

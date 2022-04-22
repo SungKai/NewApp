@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor colorNamed:@"238_238_238"];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.bannerView];
     //请求Latest数据
@@ -49,7 +49,7 @@
 - (BannerView *)bannerView{
     if (!_bannerView) {
         _bannerView = [[BannerView alloc] init];
-        _bannerView.backgroundColor = [UIColor blackColor];
+        _bannerView.backgroundColor = [UIColor colorNamed:@"254_149_87"];
         [_bannerView stretchLeft_toPointX:self.view.left offset:20];
         [_bannerView stretchTop_toPointY:self.view.top offset:20];
         [_bannerView stretchRight_toPointX:self.view.right offset:20];

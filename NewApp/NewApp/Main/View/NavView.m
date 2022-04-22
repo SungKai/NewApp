@@ -16,7 +16,7 @@
         [self addSubview:self.funnyBtn];
         [self addSubview:self.schoolBtn];
         [self addSubview:self.silderImageView];
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor colorNamed:@"247_247_247"];
         [self setPosition];
         //设置默认状态
         

@@ -19,7 +19,7 @@
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor colorNamed:@"247_247_247"];
         [self.contentView addSubview:self.titleLab];
         [self.contentView addSubview:self.hintLab];
         [self.contentView addSubview:self.imgView];
@@ -38,8 +38,8 @@
     CurrentNewsCell *currentCell = [tableView dequeueReusableCellWithIdentifier:identyfing];
     if (!currentCell) {
         currentCell = [[CurrentNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identyfing];
-        currentCell.titleLab.backgroundColor = [UIColor orangeColor];
-        currentCell.hintLab.backgroundColor = [UIColor systemPinkColor];
+        currentCell.titleLab.backgroundColor = [UIColor colorNamed:@"204_204_204"];
+        currentCell.hintLab.backgroundColor = [UIColor colorNamed:@"204_204_204"];
     }
     return currentCell;
 }
@@ -81,7 +81,8 @@
 - (UILabel *)titleLab {
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] init];
-        _titleLab.backgroundColor = [UIColor lightGrayColor];
+        _titleLab.textColor = [UIColor colorNamed:@"51_51_51"];
+//        _titleLab.backgroundColor = [UIColor colorNamed:@"51_51_51"];
         _titleLab.font = [UIFont boldSystemFontOfSize:20];
     }
     return _titleLab;
@@ -90,7 +91,7 @@
 - (UILabel *)hintLab {
     if (!_hintLab) {
         _hintLab = [[UILabel alloc] init];
-        _hintLab.backgroundColor = [UIColor lightGrayColor];
+        _hintLab.textColor = [UIColor colorNamed:@"102_102_102"];
         _hintLab.font = [UIFont systemFontOfSize:15];
     }
     return _hintLab;
@@ -101,7 +102,7 @@
         _imgView = [[UIImageView alloc]init];
         _imgView.layer.masksToBounds = YES;
         _imgView.layer.cornerRadius = 5;
-        _imgView.backgroundColor = [UIColor lightGrayColor];
+        _imgView.backgroundColor = [UIColor colorNamed:@"255_211_176"];
     }
     return _imgView;
 }

@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 线2
 @property (nonatomic, strong) UILabel *line2;
 
+///框
+@property (nonatomic, strong) UIImageView *imgView;
+
 //大小设置
 - (void)setPosition;
 

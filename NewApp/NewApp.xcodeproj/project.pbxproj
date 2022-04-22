@@ -23,6 +23,7 @@
 		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
 		7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548536280DBA2A00338BF1 /* PersonFirstView.m */; };
 		7A54853A280DBA3700338BF1 /* PersonSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548539280DBA3700338BF1 /* PersonSecondView.m */; };
+		7A548544281191BE00338BF1 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A548543281191BE00338BF1 /* Color.xcassets */; };
 		7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */; };
 		7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604852809CED8001BC1B1 /* CurrentNewsTableView.m */; };
 		7A7604A8280B1F6A001BC1B1 /* SchoolNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604A7280B1F6A001BC1B1 /* SchoolNewsTableView.m */; };
@@ -86,6 +87,7 @@
 		7A548536280DBA2A00338BF1 /* PersonFirstView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonFirstView.m; sourceTree = "<group>"; };
 		7A548538280DBA3700338BF1 /* PersonSecondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSecondView.h; sourceTree = "<group>"; };
 		7A548539280DBA3700338BF1 /* PersonSecondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSecondView.m; sourceTree = "<group>"; };
+		7A548543281191BE00338BF1 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		7A76047E2809C66F001BC1B1 /* CurrentNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsCell.h; sourceTree = "<group>"; };
 		7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentNewsCell.m; sourceTree = "<group>"; };
 		7A7604842809CED8001BC1B1 /* CurrentNewsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsTableView.h; sourceTree = "<group>"; };
@@ -485,6 +487,8 @@
 		B54BE2B52801AF0F0095769A = {
 			isa = PBXGroup;
 			children = (
+				7A548543281191BE00338BF1 /* Color.xcassets */,
+				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				B54BE2C02801AF0F0095769A /* NewApp */,
 				B54BE2BF2801AF0F0095769A /* Products */,
 				2B56657591FF0C9D98B31688 /* Pods */,
@@ -514,7 +518,6 @@
 				142B7493280AF6DC008B6485 /* ZHNewsModel */,
 				B509538C280B014200E9D3FD /* SNModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
-				B54BE2CD2801AF110095769A /* Assets.xcassets */,
 				B54BE2D22801AF110095769A /* Info.plist */,
 				B50953AA2811372000E9D3FD /* schoolNews.plist */,
 				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
@@ -670,6 +673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54BE2D12801AF110095769A /* LaunchScreen.storyboard in Resources */,
+				7A548544281191BE00338BF1 /* Color.xcassets in Resources */,
 				B54BE2CE2801AF110095769A /* Assets.xcassets in Resources */,
 				B50953AB2811372000E9D3FD /* schoolNews.plist in Resources */,
 			);

@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.redColor;
+    self.view.backgroundColor = [UIColor colorNamed:@"247_247_247"];
     [self.view addSubview:self.personFirstView];
     [self.view addSubview:self.personSecondView];
 }

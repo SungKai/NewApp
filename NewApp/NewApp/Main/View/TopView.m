@@ -15,7 +15,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = UIColor.brownColor;
+        self.backgroundColor = [UIColor colorNamed:@"247_247_247"];
         self.frame = frame;
         
         [self addSubview:self.personalBtn];
@@ -25,6 +25,7 @@
         [self addSubview:self.dayNumber];
         [self addSubview:self.line2];
         [self addSubview:self.dayDate];
+        [self addSubview:self.imgView];
         //放置位置
         [self setPosition];
         //加载日期
@@ -41,7 +42,7 @@
         _personalBtn = [[UIButton alloc] init];
         _personalBtn.layer.masksToBounds = YES;
         _personalBtn.layer.cornerRadius = 25;
-        _personalBtn.backgroundColor = [UIColor colorWithRed:0.7 green:0.9 blue:1 alpha:1];
+        _personalBtn.backgroundColor = [UIColor colorNamed:@"254_149_87"];
     }
     return _personalBtn;
 }
@@ -51,7 +52,7 @@
         _nameLbl = [[UILabel alloc] init];
         _nameLbl.text = @"用户名";
         _nameLbl.font = [UIFont systemFontOfSize:20];
-        _nameLbl.textColor = [UIColor greenColor];
+        _nameLbl.textColor = [UIColor colorNamed:@"51_51_51"];
     }
     return _nameLbl;
 }
@@ -61,7 +62,7 @@
     if (!_line1) {
         _line1 = [[UILabel alloc] init];
         _line1.text = @"|";
-        _line1.textColor = [UIColor whiteColor];
+        _line1.textColor = [UIColor colorNamed:@"204_204_204"];
         _line1.font = [UIFont systemFontOfSize:40];
         
     }
@@ -71,7 +72,7 @@
 - (UILabel *)monthNumber {
     if (!_monthNumber) {
         _monthNumber = [[UILabel alloc] init];
-        _monthNumber.textColor = [UIColor greenColor];
+        _monthNumber.textColor = [UIColor colorNamed:@"51_51_51"];
         _monthNumber.font = [UIFont systemFontOfSize:16];
     }
     return _monthNumber;
@@ -80,7 +81,7 @@
 - (UILabel *)dayNumber {
     if (!_dayNumber) {
         _dayNumber = [[UILabel alloc] init];
-        _dayNumber.textColor = [UIColor greenColor];
+        _dayNumber.textColor = [UIColor colorNamed:@"51_51_51"];
         _dayNumber.font = [UIFont systemFontOfSize:16];
     }
     return _dayNumber;
@@ -90,7 +91,7 @@
     if (!_line2) {
         _line2 = [[UILabel alloc] init];
         _line2.text = @"|";
-        _line2.textColor = [UIColor whiteColor];
+        _line2.textColor = [UIColor colorNamed:@"204_204_204"];
         _line2.font = [UIFont systemFontOfSize:40];
     }
     return _line2;
@@ -99,12 +100,19 @@
 - (UILabel *)dayDate {
     if (!_dayDate) {
         _dayDate = [[UILabel alloc] init];
-        _dayDate.textColor = [UIColor greenColor];
+        _dayDate.textColor = [UIColor colorNamed:@"51_51_51"];
         _dayDate.font = [UIFont systemFontOfSize:20];
     }
     return _dayDate;
 }
 
+- (UIImageView *)imgView {
+    if (!_imgView) {
+        _imgView = [[UIImageView alloc] init];
+        _imgView.image = [UIImage imageNamed:@"框"];
+    }
+    return _imgView;
+}
 
 - (void)setPosition {
     [self.personalBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -141,8 +149,15 @@
     }];
     
     [self.dayDate mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self).offset(-15);
-            make.left.equalTo(self.line2.mas_right).offset(20);
+        make.bottom.equalTo(self).offset(-15);
+        make.left.equalTo(self.line2.mas_right).offset(20);
+    }];
+    
+    [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.personalBtn.mas_right).offset(5);
+        make.right.equalTo(self).offset(-30);
+        make.top.equalTo(self.mas_top);
+        make.bottom.equalTo(self);
     }];
 }
 

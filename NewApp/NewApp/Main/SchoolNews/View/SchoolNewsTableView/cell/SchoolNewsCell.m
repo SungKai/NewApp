@@ -14,7 +14,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor colorNamed:@"247_247_247"];
         [self.contentView addSubview:self.titleLab];
 //        [self.contentView addSubview:self.hintLab];
         [self setPosition];
@@ -32,7 +32,7 @@
     SchoolNewsCell *schoolCell = [tableView dequeueReusableCellWithIdentifier:identyfing];
     if (!schoolCell) {
         schoolCell = [[SchoolNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identyfing];
-        schoolCell.titleLab.backgroundColor = [UIColor lightGrayColor];
+        schoolCell.titleLab.backgroundColor = [UIColor colorNamed:@"204_204_204"];
 //        schoolCell.hintLab.backgroundColor = [UIColor systemGreenColor];
     }
     return schoolCell;

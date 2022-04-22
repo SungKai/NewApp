@@ -50,7 +50,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.view.backgroundColor = UIColor.whiteColor;
+        self.view.backgroundColor = [UIColor colorNamed:@"247_247_247"];
     }
     return self;
 }
@@ -95,7 +95,7 @@
     if (!_scrollView) {
 //        CGFloat a = StatusBarHeight;
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navView.frame.origin.y + self.navView.frame.size.height, self.view.width, self.view.height - self.navView.frame.origin.y)];
-        _scrollView.backgroundColor = [UIColor lightGrayColor];
+        _scrollView.backgroundColor = [UIColor colorNamed:@"238_238_238"];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
         _scrollView.showsHorizontalScrollIndicator = NO;
