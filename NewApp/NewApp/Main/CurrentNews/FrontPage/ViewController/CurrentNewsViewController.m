@@ -69,7 +69,7 @@
 #pragma mark - Getter
 - (CurrentNewsTableView *)tableView {
     if (!_tableView) {
-        _tableView = [[CurrentNewsTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 200) style:UITableViewStyleGrouped];
+        _tableView = [[CurrentNewsTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor colorNamed:@"237_237_237"];
         _tableView.cnVDelegate = self;
 //        _tableView.estimatedRowHeight = 0;
