@@ -20,36 +20,7 @@
     }
     return self;
 }
-#pragma mark - Getter
 
-- (UILabel *)titleLab {
-    if (!_titleLab) {
-        _titleLab = [[UILabel alloc] init];
-        _titleLab.textColor = [UIColor blackColor];
-        _titleLab.font = [UIFont boldSystemFontOfSize:25];
-        _titleLab.textAlignment = NSTextAlignmentCenter;
-    }
-    return _titleLab;
-}
-
-- (UILabel *)textLab {
-    if (!_textLab) {
-        _textLab = [[UILabel alloc] init];
-        _textLab.textColor = [UIColor blackColor];
-        _textLab.font = [UIFont systemFontOfSize:16];
-    }
-    return _textLab;
-}
-
-- (UIButton *)backBtn {
-    if (!_backBtn) {
-        _backBtn = [[UIButton alloc] init];
-        _backBtn.frame = CGRectMake(15, 13, 17, 27);
-        [_backBtn setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-        [_backBtn addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _backBtn;
-}
 #pragma mark - Method
 //载入数据
 - (void)gainTitleLab:(NSString *)titleLab TextLab:(NSString *)textLab {
@@ -79,6 +50,37 @@
 //返回上一个界面
 - (void)clickBack {
     [self.SNNextViewDelegete back];
+}
+
+#pragma mark - Getter
+
+- (UILabel *)titleLab {
+    if (!_titleLab) {
+        _titleLab = [[UILabel alloc] init];
+        _titleLab.textColor = [UIColor blackColor];
+        _titleLab.font = [UIFont boldSystemFontOfSize:25];
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _titleLab;
+}
+
+- (UILabel *)textLab {
+    if (!_textLab) {
+        _textLab = [[UILabel alloc] init];
+        _textLab.textColor = [UIColor blackColor];
+        _textLab.font = [UIFont systemFontOfSize:16];
+    }
+    return _textLab;
+}
+
+- (UIButton *)backBtn {
+    if (!_backBtn) {
+        _backBtn = [[UIButton alloc] init];
+        _backBtn.frame = CGRectMake(15, 13, 17, 27);
+        [_backBtn setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [_backBtn addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backBtn;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

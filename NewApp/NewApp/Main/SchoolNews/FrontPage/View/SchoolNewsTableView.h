@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)clickGainIndexPath:(NSIndexPath *)indexPath;
 ///从新闻详情页回到新闻页
 - (void)backToFrontVC;
+
 @end
 
 @interface SchoolNewsTableView : UITableView

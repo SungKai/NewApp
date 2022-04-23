@@ -6,13 +6,14 @@
 //
 
 #import "CurrentNewsViewController.h"
-
 //M
 #import "WYNewsModel.h"
 //View
 #import "CurrentNewsTableView.h"
 
-@interface CurrentNewsViewController ()
+@interface CurrentNewsViewController () <
+    CurrentNewsTableViewDelegate
+>
 
 @property (nonatomic, strong) CurrentNewsTableView *tableView;
 
@@ -21,7 +22,7 @@
 @end
 
 @implementation CurrentNewsViewController
-
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -55,12 +56,22 @@
      failure:^(NSError * _Nonnull error) {
     }];
 }
-#pragma mark-懒加载
+
+#pragma mark - Delegate
+
+// MARK: <CurrentNewsTableViewDelegate>
+///跳转到时事新闻详情界面
+- (void)clickGainIndexPath:(NSIndexPath *)indexPath {
+    CNNextViewController *cnNextVC = [[CNNextViewController alloc] initWithURL:self.wyNewModel.newsAry[indexPath.row].newsURL];
+    [self.cnVCDelegete jumpToCNNextVC:cnNextVC];
+}
+
+#pragma mark - Getter
 - (CurrentNewsTableView *)tableView {
     if (!_tableView) {
         _tableView = [[CurrentNewsTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 200) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor colorNamed:@"237_237_237"];
-        
+        _tableView.cnVDelegate = self;
 //        _tableView.estimatedRowHeight = 0;
 //        _tableView.estimatedSectionHeaderHeight = 0;
 //        _tableView.estimatedSectionFooterHeight = 0;

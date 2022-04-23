@@ -29,7 +29,7 @@
 }
 
 
-#pragma mark- <UITableViewDataSource>
+#pragma mark - <UITableViewDataSource>
 /// 组数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -52,19 +52,26 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //设置无数据状态
     CurrentNewsCell *cell = [CurrentNewsCell CreateReusableCell:tableView];
-    NSLog(@"-------%ld", self.wydata.count);  //0
     //取出Model里面的数据，把相应数据给相应cell
     WYNews *dataModel = self.wydata[indexPath.row];
 
     return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.digest WithImageURL:dataModel.imgURL];
 }
 
-#pragma mark- <UITableViewDelegate>
+#pragma mark - Delegate
+
+// MARK: <UITableViewDelegate>
 /// 设置cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 110;
 }
 
+///单击cell跳转
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.cnVDelegate clickGainIndexPath:indexPath];
+    
+}
 #pragma mark - Getter
 - (NSArray<WYNews *> *)wydata {
     if (!_wydata) {

@@ -6,8 +6,6 @@
 //
 
 #import "SchoolNewsViewController.h"
-//VC
-#import "SNNextViewController.h"
 //V
 #import "SchoolNewsTableView.h"
 //M
@@ -26,6 +24,8 @@
 
 @implementation SchoolNewsViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor systemBlueColor];
@@ -36,6 +36,20 @@
     
 //    //把数据传递给SNNextVC
 //    [self.snFrontDelegete gainArrayDataToNext:self.dataArray];
+}
+
+#pragma mark - Delegete
+
+// MARK:  <SchoolNewsTableViewDelegate>
+- (void)clickGainIndexPath:(NSIndexPath *)indexPath {
+    //传给下一个VC该新闻所在的index
+    SNNextViewController *snNextVC = [[SNNextViewController alloc] initWithTitleLab:self.dataArray[indexPath.row].title TextLab:self.dataArray[indexPath.row].text];
+    snNextVC.SNNextViewControllerDelegete = self;
+    [self.SchoolNewsViewControllerDelegete jumpToSNNextVC:snNextVC];
+}
+#pragma mark - <SNNextViewControllerDelegete>
+- (void)back {
+    [self.SchoolNewsViewControllerDelegete jumpToFrontVC];
 }
 
 #pragma mark - Getter
@@ -60,23 +74,10 @@
             [maArray addObject:snModel];
         }
         _dataArray = maArray;
-        NSLog(@"=============%ld", _dataArray.count);
     }
     return _dataArray;
 }
-#pragma mark - Delegete
 
-// MARK:  <SchoolNewsTableViewDelegate>
-- (void)clickGainIndexPath:(NSIndexPath *)indexPath {
-    //传给下一个VC该新闻所在的index
-    SNNextViewController *snNextVC = [[SNNextViewController alloc] initWithTitleLab:self.dataArray[indexPath.row].title TextLab:self.dataArray[indexPath.row].text];
-    snNextVC.SNNextViewControllerDelegete = self;
-    [self.SchoolNewsViewControllerDelegete jumpToNextVC:snNextVC];
-}
-#pragma mark - <SNNextViewControllerDelegete>
-- (void)back {
-    [self.SchoolNewsViewControllerDelegete jumpToFrontVC];
-}
 /*
 #pragma mark - Navigation
 

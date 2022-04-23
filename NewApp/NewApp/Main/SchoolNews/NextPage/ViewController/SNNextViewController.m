@@ -30,12 +30,21 @@
     }
     return self;
 }
-
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
     // Do any additional setup after loading the view.
 }
+
+#pragma mark - Method
+
+#pragma mark - Delegete
+// MARK: <SNNextViewDelegete>
+- (void)back {
+    [self.SNNextViewControllerDelegete back];
+}
+
 #pragma mark - Getter
 - (SNNextView *)snNextView {
     if (!_snNextView) {
@@ -43,13 +52,6 @@
         _snNextView.SNNextViewDelegete = self;
     }
     return _snNextView;
-}
-#pragma mark - Method
-
-#pragma mark - Delegete
-// MARK: <SNNextViewDelegete>
-- (void)back {
-    [self.SNNextViewControllerDelegete back];
 }
 /*
 #pragma mark - Navigation

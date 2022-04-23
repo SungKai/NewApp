@@ -14,11 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol CurrentNewsTableViewDelegate <NSObject>
 
+/// 单击事件界面跳转到时事新闻详情
+/// @param indexPath indexPath
+- (void)clickGainIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface CurrentNewsTableView : UITableView
 //代理
-@property (nonatomic, weak)id <CurrentNewsTableViewDelegate> currentDelegate;
+@property (nonatomic, weak)id <CurrentNewsTableViewDelegate> cnVDelegate;
 
 @property (nonatomic, strong) NSArray <WYNews *> *wydata;
 

@@ -50,6 +50,8 @@
 		B5F6AD602813C10300D2DAC3 /* SNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD5F2813C10300D2DAC3 /* SNModel.m */; };
 		B5F6AD672813C15400D2DAC3 /* SNNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD662813C15400D2DAC3 /* SNNextViewController.m */; };
 		B5F6AD6A2813C16700D2DAC3 /* SNNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD692813C16700D2DAC3 /* SNNextView.m */; };
+		B5F6AD712813CD4A00D2DAC3 /* CNNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD702813CD4A00D2DAC3 /* CNNextViewController.m */; };
+		B5F6AD742813CD5C00D2DAC3 /* CNNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD732813CD5C00D2DAC3 /* CNNextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,10 @@
 		B5F6AD662813C15400D2DAC3 /* SNNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNextViewController.m; sourceTree = "<group>"; };
 		B5F6AD682813C16700D2DAC3 /* SNNextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNNextView.h; sourceTree = "<group>"; };
 		B5F6AD692813C16700D2DAC3 /* SNNextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNextView.m; sourceTree = "<group>"; };
+		B5F6AD6F2813CD4A00D2DAC3 /* CNNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNNextViewController.h; sourceTree = "<group>"; };
+		B5F6AD702813CD4A00D2DAC3 /* CNNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNNextViewController.m; sourceTree = "<group>"; };
+		B5F6AD722813CD5C00D2DAC3 /* CNNextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNNextView.h; sourceTree = "<group>"; };
+		B5F6AD732813CD5C00D2DAC3 /* CNNextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNNextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,9 +504,8 @@
 		B54BE2E72801B2380095769A /* CurrentNews */ = {
 			isa = PBXGroup;
 			children = (
-				B54BE2EF2801B2E90095769A /* ViewController */,
-				7A7604622809C48D001BC1B1 /* View */,
-				140102C82806FE2000AB27C2 /* WYNewsModel */,
+				B5F6AD6B2813CCF400D2DAC3 /* FrontPage */,
+				B5F6AD6C2813CD0C00D2DAC3 /* NextPage */,
 			);
 			path = CurrentNews;
 			sourceTree = "<group>";
@@ -647,6 +652,43 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B5F6AD6B2813CCF400D2DAC3 /* FrontPage */ = {
+			isa = PBXGroup;
+			children = (
+				B54BE2EF2801B2E90095769A /* ViewController */,
+				7A7604622809C48D001BC1B1 /* View */,
+				140102C82806FE2000AB27C2 /* WYNewsModel */,
+			);
+			path = FrontPage;
+			sourceTree = "<group>";
+		};
+		B5F6AD6C2813CD0C00D2DAC3 /* NextPage */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6AD6D2813CD1A00D2DAC3 /* ViewController */,
+				B5F6AD6E2813CD2C00D2DAC3 /* View */,
+			);
+			path = NextPage;
+			sourceTree = "<group>";
+		};
+		B5F6AD6D2813CD1A00D2DAC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6AD6F2813CD4A00D2DAC3 /* CNNextViewController.h */,
+				B5F6AD702813CD4A00D2DAC3 /* CNNextViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B5F6AD6E2813CD2C00D2DAC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6AD722813CD5C00D2DAC3 /* CNNextView.h */,
+				B5F6AD732813CD5C00D2DAC3 /* CNNextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -780,9 +822,11 @@
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B5F6AD6A2813C16700D2DAC3 /* SNNextView.m in Sources */,
 				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
+				B5F6AD742813CD5C00D2DAC3 /* CNNextView.m in Sources */,
 				140102AF2806E4D200AB27C2 /* QuestionSelectView.m in Sources */,
 				B5244C40280462570034FC6A /* LoginViewController.m in Sources */,
 				140102A12806E00F00AB27C2 /* HTTPClient.m in Sources */,
+				B5F6AD712813CD4A00D2DAC3 /* CNNextViewController.m in Sources */,
 				142B7490280AF004008B6485 /* ZHNewsModel.m in Sources */,
 				B5244C4D28053ACF0034FC6A /* TopView.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,

@@ -20,6 +20,7 @@
 @interface MainViewController () <
     UIScrollViewDelegate,
     NavViewDelegate,
+    CurrentNewsViewControllerDelegete,
     SchoolNewsViewControllerDelegete
 >
 
@@ -55,7 +56,7 @@
     }
     return self;
 }
-
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.topView];
@@ -89,64 +90,6 @@
         
     }];
 }
-
-#pragma mark - Getter
-//scrollView
-- (UIScrollView *)scrollView {
-    if (!_scrollView) {
-//        CGFloat a = StatusBarHeight;
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navView.frame.origin.y + self.navView.frame.size.height, self.view.width, self.view.height - self.navView.frame.origin.y)];
-        _scrollView.backgroundColor = [UIColor lightGrayColor];
-        _scrollView.delegate = self;
-        _scrollView.pagingEnabled = YES;
-        _scrollView.showsHorizontalScrollIndicator = NO;
-        _scrollView.showsVerticalScrollIndicator = NO;
-        _scrollView.bounces = NO;
-    }
-    return _scrollView;
-}
-
-//curVC
-- (CurrentNewsViewController *)curVC {
-    if (!_curVC) {
-        _curVC = [[CurrentNewsViewController alloc] init];
-    }
-    return _curVC;
-}
-
-//funVC
-- (FunnyNewsViewController *)funVC {
-    if (!_funVC) {
-        _funVC = [[FunnyNewsViewController alloc] init];
-    }
-    return _funVC;
-}
-
-//funVC
-- (SchoolNewsViewController *)schoolVC {
-    if (!_schoolVC) {
-        _schoolVC = [[SchoolNewsViewController alloc] init];
-        _schoolVC.SchoolNewsViewControllerDelegete = self;
-    }
-    return _schoolVC;
-}
-
-//navView
-- (NavView *)navView {
-    if (!_navView) {
-        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, self.topView.frame.origin.y + self.topView.frame.size.height, self.view.width, 40)];
-        _navView.delegate = self;
-    }
-    return _navView;
-}
-//topView
-- (TopView *)topView {
-    if (!_topView) {
-        _topView = [[TopView alloc] initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, ScreenWidth, 60)];
-    }
-    return _topView;
-}
-
 #pragma mark - Method
 - (void)setMainScrollView {
     [self.view addSubview:self.scrollView];
@@ -197,13 +140,80 @@
         self.scrollView.contentOffset = CGPointMake(ScreenWidth * tag, 0);
     }];
 }
+
+// MARK: <CurrentNewsViewControllerDelegete>
+//时事新闻跳转到新闻详情页
+- (void)jumpToCNNextVC:(CNNextViewController *)cnNextVC {
+    [self.navigationController pushViewController:cnNextVC animated:YES];
+}
+
 // MARK:  <SchoolNewsViewControllerDelegete>
 //教务新闻页跳转到教务新闻详情页
-- (void)jumpToNextVC:(SNNextViewController *)snNextVC {
+- (void)jumpToSNNextVC:(SNNextViewController *)snNextVC {
     [self.navigationController pushViewController:snNextVC animated:YES];
 }
 ///从nextVC跳回frontVC
 - (void)jumpToFrontVC {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - Getter
+//scrollView
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+//        CGFloat a = StatusBarHeight;
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navView.frame.origin.y + self.navView.frame.size.height, self.view.width, self.view.height - self.navView.frame.origin.y)];
+        _scrollView.backgroundColor = [UIColor lightGrayColor];
+        _scrollView.delegate = self;
+        _scrollView.pagingEnabled = YES;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.bounces = NO;
+    }
+    return _scrollView;
+}
+
+//curVC
+- (CurrentNewsViewController *)curVC {
+    if (!_curVC) {
+        _curVC = [[CurrentNewsViewController alloc] init];
+        _curVC.cnVCDelegete = self;
+    }
+    return _curVC;
+}
+
+//funVC
+- (FunnyNewsViewController *)funVC {
+    if (!_funVC) {
+        _funVC = [[FunnyNewsViewController alloc] init];
+    }
+    return _funVC;
+}
+
+//funVC
+- (SchoolNewsViewController *)schoolVC {
+    if (!_schoolVC) {
+        _schoolVC = [[SchoolNewsViewController alloc] init];
+        _schoolVC.SchoolNewsViewControllerDelegete = self;
+    }
+    return _schoolVC;
+}
+
+//navView
+- (NavView *)navView {
+    if (!_navView) {
+        _navView = [[NavView alloc] initWithFrame:CGRectMake(0, self.topView.frame.origin.y + self.topView.frame.size.height, self.view.width, 40)];
+        _navView.delegate = self;
+    }
+    return _navView;
+}
+//topView
+- (TopView *)topView {
+    if (!_topView) {
+        _topView = [[TopView alloc] initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, ScreenWidth, 60)];
+    }
+    return _topView;
+}
+
+
 @end

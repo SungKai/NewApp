@@ -64,7 +64,7 @@
   [super setFrame:frame];
 }
 
-#pragma mark- 懒加载
+#pragma mark - Lazy
 - (UILabel *)titleLab {
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] init];

@@ -28,7 +28,10 @@
         NSMutableArray *ma = NSMutableArray.array;
         for (NSDictionary *dict in responseObject[@"T1348647853363"]) {
             WYNews *aNew = [[WYNews alloc] initWithDictionary:dict];
-            [ma addObject:aNew];
+            //有部分新闻没有简短信息digest，会影响进入新闻详情页，需要删掉
+            if (![aNew.digest  isEqual: @""]) {
+                [ma addObject:aNew];
+            }
         }
         self.newsAry = ma.copy;
         if (success) {
