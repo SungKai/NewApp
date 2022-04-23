@@ -37,8 +37,6 @@
     }
     return schoolCell;
 }
-
-
 //载入信息
 - (SchoolNewsCell *)cellWithInformation:(SchoolNewsCell *)cell WithTitleText:(NSString *)titleText WithHintText:(NSString *)hintText {
     cell.titleLab.text = titleText;

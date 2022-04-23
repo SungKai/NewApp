@@ -181,19 +181,14 @@
     [self.navView silderAction:tag];
 }
 
-// MARK:  <NavDelegate>
-
-//点击了导航栏的按钮后动画跳转到相应界面
-- (void)silderView:(NSInteger)tag {
-    if (self.currentIndex == tag) {
-        return;
-    }
-    self.currentIndex = tag;
-    //动画
-    [UIView animateWithDuration:0.3 animations:^{
-        self.currentIndex = tag;
-        self.scrollView.contentOffset = CGPointMake(ScreenWidth * tag, 0);
-    }];
+// MARK:  <SchoolNewsViewControllerDelegete>
+//教务新闻页跳转到教务新闻详情页
+- (void)jumpToNextVC:(SNNextViewController *)snNextVC {
+    [self.navigationController pushViewController:snNextVC animated:YES];
+}
+///从nextVC跳回frontVC
+- (void)jumpToFrontVC {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
