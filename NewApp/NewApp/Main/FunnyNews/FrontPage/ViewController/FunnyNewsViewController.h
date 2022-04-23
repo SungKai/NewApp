@@ -9,7 +9,7 @@
 //中间的趣味新闻
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FunnyNewsViewController : UIViewController
+@interface FunnyNewsViewController : UIViewController <UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
 @end
 
