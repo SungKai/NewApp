@@ -44,6 +44,7 @@
 		B54BE2DF2801AFEA0095769A /* CurrentNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BE2DE2801AFEA0095769A /* CurrentNewsViewController.m */; };
 		B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BE2E12801AFFE0095769A /* FunnyNewsViewController.m */; };
 		B54BE2EE2801B2D60095769A /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BE2ED2801B2D60095769A /* NavView.m */; };
+		B5CBE63928141C1F009C3151 /* FNNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CBE63828141C1F009C3151 /* FNNextViewController.m */; };
 		B5F6AD502813C04500D2DAC3 /* SchoolNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD4F2813C04500D2DAC3 /* SchoolNewsViewController.m */; };
 		B5F6AD592813C09C00D2DAC3 /* SchoolNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD582813C09C00D2DAC3 /* SchoolNewsCell.m */; };
 		B5F6AD5C2813C0BA00D2DAC3 /* SchoolNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD5B2813C0BA00D2DAC3 /* SchoolNewsTableView.m */; };
@@ -51,7 +52,6 @@
 		B5F6AD672813C15400D2DAC3 /* SNNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD662813C15400D2DAC3 /* SNNextViewController.m */; };
 		B5F6AD6A2813C16700D2DAC3 /* SNNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD692813C16700D2DAC3 /* SNNextView.m */; };
 		B5F6AD712813CD4A00D2DAC3 /* CNNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD702813CD4A00D2DAC3 /* CNNextViewController.m */; };
-		B5F6AD742813CD5C00D2DAC3 /* CNNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6AD732813CD5C00D2DAC3 /* CNNextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +130,8 @@
 		B54BE2E62801B0B40095769A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B54BE2EC2801B2D60095769A /* NavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavView.h; sourceTree = "<group>"; };
 		B54BE2ED2801B2D60095769A /* NavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavView.m; sourceTree = "<group>"; };
+		B5CBE63728141C1F009C3151 /* FNNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNNextViewController.h; sourceTree = "<group>"; };
+		B5CBE63828141C1F009C3151 /* FNNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNNextViewController.m; sourceTree = "<group>"; };
 		B5F6AD4E2813C04500D2DAC3 /* SchoolNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchoolNewsViewController.h; sourceTree = "<group>"; };
 		B5F6AD4F2813C04500D2DAC3 /* SchoolNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchoolNewsViewController.m; sourceTree = "<group>"; };
 		B5F6AD572813C09C00D2DAC3 /* SchoolNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchoolNewsCell.h; sourceTree = "<group>"; };
@@ -144,8 +146,6 @@
 		B5F6AD692813C16700D2DAC3 /* SNNextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNextView.m; sourceTree = "<group>"; };
 		B5F6AD6F2813CD4A00D2DAC3 /* CNNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNNextViewController.h; sourceTree = "<group>"; };
 		B5F6AD702813CD4A00D2DAC3 /* CNNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNNextViewController.m; sourceTree = "<group>"; };
-		B5F6AD722813CD5C00D2DAC3 /* CNNextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNNextView.h; sourceTree = "<group>"; };
-		B5F6AD732813CD5C00D2DAC3 /* CNNextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNNextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,7 +491,6 @@
 				B5244C44280465880034FC6A /* Person */,
 				140102C92807011000AB27C2 /* BaseView */,
 				B5244C4E28053BB90034FC6A /* Tool */,
-				142B7493280AF6DC008B6485 /* ZHNewsModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2D22801AF110095769A /* Info.plist */,
 				B50953AA2811372000E9D3FD /* schoolNews.plist */,
@@ -513,8 +512,8 @@
 		B54BE2E82801B2470095769A /* FunnyNews */ = {
 			isa = PBXGroup;
 			children = (
-				B54BE2F02801B30F0095769A /* ViewController */,
-				7A5260702809B616000A06BC /* View */,
+				B5CBE63428141BCC009C3151 /* FrontPage */,
+				B5CBE63528141BF1009C3151 /* NextPage */,
 			);
 			path = FunnyNews;
 			sourceTree = "<group>";
@@ -565,6 +564,33 @@
 			children = (
 				B54BE2DA2801AFD40095769A /* MainViewController.h */,
 				B54BE2DB2801AFD40095769A /* MainViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B5CBE63428141BCC009C3151 /* FrontPage */ = {
+			isa = PBXGroup;
+			children = (
+				B54BE2F02801B30F0095769A /* ViewController */,
+				7A5260702809B616000A06BC /* View */,
+				142B7493280AF6DC008B6485 /* ZHNewsModel */,
+			);
+			path = FrontPage;
+			sourceTree = "<group>";
+		};
+		B5CBE63528141BF1009C3151 /* NextPage */ = {
+			isa = PBXGroup;
+			children = (
+				B5CBE63628141BFF009C3151 /* ViewController */,
+			);
+			path = NextPage;
+			sourceTree = "<group>";
+		};
+		B5CBE63628141BFF009C3151 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5CBE63728141C1F009C3151 /* FNNextViewController.h */,
+				B5CBE63828141C1F009C3151 /* FNNextViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -666,7 +692,6 @@
 			isa = PBXGroup;
 			children = (
 				B5F6AD6D2813CD1A00D2DAC3 /* ViewController */,
-				B5F6AD6E2813CD2C00D2DAC3 /* View */,
 			);
 			path = NextPage;
 			sourceTree = "<group>";
@@ -678,15 +703,6 @@
 				B5F6AD702813CD4A00D2DAC3 /* CNNextViewController.m */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		B5F6AD6E2813CD2C00D2DAC3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B5F6AD722813CD5C00D2DAC3 /* CNNextView.h */,
-				B5F6AD732813CD5C00D2DAC3 /* CNNextView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -822,7 +838,6 @@
 				B54BE2C32801AF0F0095769A /* AppDelegate.m in Sources */,
 				B5F6AD6A2813C16700D2DAC3 /* SNNextView.m in Sources */,
 				B5244C3D2804624A0034FC6A /* LoginView.m in Sources */,
-				B5F6AD742813CD5C00D2DAC3 /* CNNextView.m in Sources */,
 				140102AF2806E4D200AB27C2 /* QuestionSelectView.m in Sources */,
 				B5244C40280462570034FC6A /* LoginViewController.m in Sources */,
 				140102A12806E00F00AB27C2 /* HTTPClient.m in Sources */,
@@ -831,6 +846,7 @@
 				B5244C4D28053ACF0034FC6A /* TopView.m in Sources */,
 				B54BE2D42801AF110095769A /* main.m in Sources */,
 				B5F6AD502813C04500D2DAC3 /* SchoolNewsViewController.m in Sources */,
+				B5CBE63928141C1F009C3151 /* FNNextViewController.m in Sources */,
 				7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */,
 				B54BE2EE2801B2D60095769A /* NavView.m in Sources */,
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,
