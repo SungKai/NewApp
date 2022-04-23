@@ -33,7 +33,7 @@
     [self.view addSubview:self.tableView];
     //传递数据给View
     self.tableView.SNData = self.dataArray;
-
+    
 //    //把数据传递给SNNextVC
 //    [self.snFrontDelegete gainArrayDataToNext:self.dataArray];
 }
@@ -77,13 +77,5 @@
 - (void)back {
     [self.SchoolNewsViewControllerDelegete jumpToFrontVC];
 }
-/*
-#pragma mark - Navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

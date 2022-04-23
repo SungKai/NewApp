@@ -58,11 +58,12 @@
 //设置分割线的宽度和高度
 -(void)setFrame:(CGRect)frame
 {
-  frame.origin.x = 2;//这里间距为10可以根据自己的情况调整
+  frame.origin.x = 2;//这里间距为10可以根据自己的情况调整
   frame.size.width -= frame.origin.x;
   frame.size.height -= 5 * frame.origin.x;
   [super setFrame:frame];
 }
+
 #pragma mark- 懒加载
 - (UILabel *)titleLab {
     if (!_titleLab) {

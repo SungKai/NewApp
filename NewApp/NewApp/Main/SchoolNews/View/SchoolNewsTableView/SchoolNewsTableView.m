@@ -22,6 +22,8 @@
         self.showsVerticalScrollIndicator = NO;
         //不限时分割线
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.SNData = [NSArray<SNModel *> array];
+        
     }
     return self;
 }
@@ -34,7 +36,7 @@
 
 /// cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return self.SNData.count;
 }
 
 ///设置内容
@@ -42,10 +44,9 @@
     //设置无数据状态
     SchoolNewsCell *cell = [SchoolNewsCell CreateReusableCell:tableView];
     //取出Model里面的数据，把相应数据给相应cell
-//    DataModel *dataModel = self.everydayNews[indexPath.section].stories[indexPath.row];
-    
-//    return  [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.hint WithImageURL:dataModel.imageURL];
-    return cell;
+    SNModel *dataModel = self.SNData[indexPath.row];
+    return [cell cellWithInformation:cell WithTitleText:dataModel.title WithHintText:dataModel.text];
+//    return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -59,19 +60,16 @@
 #pragma mark- <UITableViewDelegate>
 /// 设置cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 70;
+}
+//单击新闻跳转
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //cell变灰
+    SchoolNewsCell *cell = [self cellForRowAtIndexPath:indexPath];
+    cell.titleLab.textColor = [UIColor grayColor];
+    //跳转事件传递indexPath
+    [self.schoolDelegate clickGainIndexPath:indexPath];
 }
 
-
-
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
