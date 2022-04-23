@@ -13,7 +13,7 @@
 /// @param text 文本内容
 /// @param size 字号
 /// @param maxWidth 最大宽度
-/// @param maxNumOfLine 最大行数
+/// @param maxNumOfLine 最大行数，等于-1时相当于不限行数
 /// @param interval 文字间隔
 - (CGSize)MaxLabelWidth:(NSString *)text FontOfSize:(NSInteger)size MaxWidth:(CGFloat)maxWidth MaxNumberOfLine:(NSInteger)maxNumOfLine Interval:(CGFloat)interval;
 

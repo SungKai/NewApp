@@ -29,7 +29,6 @@
 		7A7604B0280B2322001BC1B1 /* WaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604AF280B2322001BC1B1 /* WaterFlowView.m */; };
 		7A9DFD7C280DB50100BBA782 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9DFD7B280DB50100BBA782 /* BannerView.m */; };
 		B05CE94A997D823ABBFE8825 /* Pods_NewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9690FE25E517FDCB3D6624 /* Pods_NewApp.framework */; };
-		B5095395280B01E600E9D3FD /* SNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5095394280B01E600E9D3FD /* SNModel.m */; };
 		B50953AB2811372000E9D3FD /* schoolNews.plist in Resources */ = {isa = PBXBuildFile; fileRef = B50953AA2811372000E9D3FD /* schoolNews.plist */; };
 		B50953AE28113DEB00E9D3FD /* UILabel+AutoHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B50953AC28113DEA00E9D3FD /* UILabel+AutoHeight.m */; };
 		B5244C3D2804624A0034FC6A /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5244C3C2804624A0034FC6A /* LoginView.m */; };
@@ -100,8 +99,6 @@
 		7A9DFD7A280DB50100BBA782 /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		7A9DFD7B280DB50100BBA782 /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		917B21508948659933AFA0B1 /* Pods-NewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.debug.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B5095393280B01E600E9D3FD /* SNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNModel.h; sourceTree = "<group>"; };
-		B5095394280B01E600E9D3FD /* SNModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNModel.m; sourceTree = "<group>"; };
 		B50953AA2811372000E9D3FD /* schoolNews.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = schoolNews.plist; path = ../../SchoolNewsData/schoolNews.plist; sourceTree = "<group>"; };
 		B50953AC28113DEA00E9D3FD /* UILabel+AutoHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AutoHeight.m"; sourceTree = "<group>"; };
 		B50953AD28113DEA00E9D3FD /* UILabel+AutoHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AutoHeight.h"; sourceTree = "<group>"; };
@@ -390,15 +387,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B509538C280B014200E9D3FD /* SNModel */ = {
-			isa = PBXGroup;
-			children = (
-				B5095393280B01E600E9D3FD /* SNModel.h */,
-				B5095394280B01E600E9D3FD /* SNModel.m */,
-			);
-			path = SNModel;
-			sourceTree = "<group>";
-		};
 		B50953AF28113DF500E9D3FD /* UILabel+AutoHeight */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,7 +486,6 @@
 				140102C92807011000AB27C2 /* BaseView */,
 				B5244C4E28053BB90034FC6A /* Tool */,
 				142B7493280AF6DC008B6485 /* ZHNewsModel */,
-				B509538C280B014200E9D3FD /* SNModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
 				B54BE2D22801AF110095769A /* Info.plist */,
 				B50953AA2811372000E9D3FD /* schoolNews.plist */,
@@ -801,7 +788,6 @@
 				B54BE2D42801AF110095769A /* main.m in Sources */,
 				B5F6AD502813C04500D2DAC3 /* SchoolNewsViewController.m in Sources */,
 				7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */,
-				B5095395280B01E600E9D3FD /* SNModel.m in Sources */,
 				B54BE2EE2801B2D60095769A /* NavView.m in Sources */,
 				B54BE2E22801AFFE0095769A /* FunnyNewsViewController.m in Sources */,
 				B5F6AD672813C15400D2DAC3 /* SNNextViewController.m in Sources */,

@@ -19,7 +19,8 @@
 
 @interface MainViewController () <
     UIScrollViewDelegate,
-    NavViewDelegate
+    NavViewDelegate,
+    SchoolNewsViewControllerDelegete
 >
 
 @property (nonatomic, strong) CurrentNewsViewController *curVC;
@@ -50,7 +51,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.view.backgroundColor = [UIColor colorNamed:@"247_247_247"];
+        self.view.backgroundColor = UIColor.whiteColor;
     }
     return self;
 }
@@ -95,7 +96,7 @@
     if (!_scrollView) {
 //        CGFloat a = StatusBarHeight;
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navView.frame.origin.y + self.navView.frame.size.height, self.view.width, self.view.height - self.navView.frame.origin.y)];
-        _scrollView.backgroundColor = [UIColor colorNamed:@"238_238_238"];
+        _scrollView.backgroundColor = [UIColor lightGrayColor];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
         _scrollView.showsHorizontalScrollIndicator = NO;
@@ -125,6 +126,7 @@
 - (SchoolNewsViewController *)schoolVC {
     if (!_schoolVC) {
         _schoolVC = [[SchoolNewsViewController alloc] init];
+        _schoolVC.SchoolNewsViewControllerDelegete = self;
     }
     return _schoolVC;
 }
@@ -181,6 +183,20 @@
     [self.navView silderAction:tag];
 }
 
+// MARK:  <NavDelegate>
+
+//点击了导航栏的按钮后动画跳转到相应界面
+- (void)silderView:(NSInteger)tag {
+    if (self.currentIndex == tag) {
+        return;
+    }
+    self.currentIndex = tag;
+    //动画
+    [UIView animateWithDuration:0.3 animations:^{
+        self.currentIndex = tag;
+        self.scrollView.contentOffset = CGPointMake(ScreenWidth * tag, 0);
+    }];
+}
 // MARK:  <SchoolNewsViewControllerDelegete>
 //教务新闻页跳转到教务新闻详情页
 - (void)jumpToNextVC:(SNNextViewController *)snNextVC {
@@ -190,5 +206,4 @@
 - (void)jumpToFrontVC {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 @end
