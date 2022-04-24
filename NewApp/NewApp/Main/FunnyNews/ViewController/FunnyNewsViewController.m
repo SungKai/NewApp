@@ -6,12 +6,12 @@
 //
 
 #import "FunnyNewsViewController.h"
-#import "WaterFlowView.h"
-#import "WaterFlowCell.h"
-#import "WaterFlowLayout.h"
 
 //View
 #import "BannerView.h"
+#import "WaterFlowView.h"
+#import "WaterFlowCell.h"
+#import "WaterFlowLayout.h"
 //Tool
 #import "UIView+RoundCorner.h"
 
@@ -33,9 +33,10 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.bannerView];
     [self.view addSubview:self.waterFlowView];
+    [self.view bringSubviewToFront:self.bannerView];
     
-    //注册单元格
-    [self.waterFlowView registerClass:[WaterFlowCell class] forCellWithReuseIdentifier:@"cell"];
+    
+    
 }
 
 #pragma mark-懒加载
@@ -53,18 +54,14 @@
     return _bannerView;
 }
 
-//- (WaterFlowView *)waterFlowView {
-//    if (!_waterFlowView) {
-//        WaterFlowLayout *layout = [[WaterFlowLayout alloc] init];
-////        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-//        _waterFlowView = [[WaterFlowView alloc] initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:layout];
-//        _waterFlowView.backgroundColor = [UIColor systemPinkColor];
-//        _waterFlowView.delegate = self;
-//        _waterFlowView.dataSource = self;
-//
-//    }
-//    return _waterFlowView;
-//}
+- (WaterFlowView *)waterFlowView {
+    if (!_waterFlowView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        _waterFlowView = [[WaterFlowView alloc] initWithFrame:CGRectMake(0, self.bannerView.height + 20, ScreenWidth, ScreenHeight) collectionViewLayout:layout];
+        
+    }
+    return _waterFlowView;
+}
 
 
 

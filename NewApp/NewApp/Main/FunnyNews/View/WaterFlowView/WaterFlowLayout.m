@@ -27,6 +27,7 @@
     }
 }
 
+
 /**distance的set方法*/
 - (void)setDistance:(NSInteger)distance{
     if (_distance != distance) {

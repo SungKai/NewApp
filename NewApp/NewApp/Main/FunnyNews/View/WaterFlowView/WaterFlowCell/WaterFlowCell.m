@@ -30,6 +30,7 @@
         _titleLab = [[UILabel alloc] init];
         _titleLab.textColor = [UIColor blackColor];
         _titleLab.font = [UIFont systemFontOfSize:20];
+        _titleLab.text = @"sssssssssssss";
     }
     return _titleLab;
 }

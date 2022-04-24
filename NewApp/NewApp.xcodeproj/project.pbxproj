@@ -25,6 +25,7 @@
 		7A54853A280DBA3700338BF1 /* PersonSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548539280DBA3700338BF1 /* PersonSecondView.m */; };
 		7A54853E280FC46700338BF1 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54853D280FC46600338BF1 /* WaterFlowLayout.m */; };
 		7A548542280FC73200338BF1 /* WaterFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548541280FC73200338BF1 /* WaterFlowCell.m */; };
+		7A548549281469EE00338BF1 /* test.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A548548281469EE00338BF1 /* test.xcassets */; };
 		7A7604802809C66F001BC1B1 /* CurrentNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */; };
 		7A7604862809CED8001BC1B1 /* CurrentNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604852809CED8001BC1B1 /* CurrentNewsTableView.m */; };
 		7A7604A8280B1F6A001BC1B1 /* SchoolNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7604A7280B1F6A001BC1B1 /* SchoolNewsTableView.m */; };
@@ -90,6 +91,7 @@
 		7A54853D280FC46600338BF1 /* WaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
 		7A548540280FC73200338BF1 /* WaterFlowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowCell.h; sourceTree = "<group>"; };
 		7A548541280FC73200338BF1 /* WaterFlowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowCell.m; sourceTree = "<group>"; };
+		7A548548281469EE00338BF1 /* test.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = test.xcassets; sourceTree = "<group>"; };
 		7A76047E2809C66F001BC1B1 /* CurrentNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsCell.h; sourceTree = "<group>"; };
 		7A76047F2809C66F001BC1B1 /* CurrentNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentNewsCell.m; sourceTree = "<group>"; };
 		7A7604842809CED8001BC1B1 /* CurrentNewsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentNewsTableView.h; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 		B54BE2B52801AF0F0095769A = {
 			isa = PBXGroup;
 			children = (
+				7A548548281469EE00338BF1 /* test.xcassets */,
 				B54BE2C02801AF0F0095769A /* NewApp */,
 				B54BE2BF2801AF0F0095769A /* Products */,
 				2B56657591FF0C9D98B31688 /* Pods */,
@@ -671,6 +674,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A548549281469EE00338BF1 /* test.xcassets in Resources */,
 				B54BE2D12801AF110095769A /* LaunchScreen.storyboard in Resources */,
 				B54BE2CE2801AF110095769A /* Assets.xcassets in Resources */,
 			);
