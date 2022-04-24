@@ -20,7 +20,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [[UITabBar appearance] setBackgroundColor:[UIColor colorNamed:@"247_247_247"]];
+        [[UITabBar appearance] setBackgroundColor:[UIColor colorNamed:@"237_237_237"]];
         self.viewControllers = @[self.mainNav, self.personNav];
         self.tabBar.tintColor = [UIColor colorNamed:@"254_149_87"];
     }
