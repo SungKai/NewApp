@@ -9,38 +9,12 @@
 #import "WaterFlowLayout.h"
 #import "WaterFlowCell.h"
 
+static NSString *CellIdentifier = @"Cell";
 @interface WaterFlowView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
 
 @implementation WaterFlowView
-
-//重写initWithFrame
-- (instancetype)initWithFrame:(CGRect)frame {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.minimumLineSpacing = 10; // 水平方向的间距
-    layout.minimumInteritemSpacing = 10;// 垂直方向的间距
-//    layout.itemSize = CGSizeMake(150, 200);//item大小
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;//垂直滚动
-    
-    self = [super initWithFrame:frame collectionViewLayout:layout];
-    if (self) {
-        self.backgroundColor = [UIColor systemBlueColor];//背景颜色
-        
-        self.showsVerticalScrollIndicator = NO;
-        self.showsHorizontalScrollIndicator = NO;//不显示滚动条
-        
-        self.clipsToBounds = NO;
-        self.pagingEnabled = YES;//开启分页
-        self.bounces = NO;//弹簧效果
-        //设置代理
-        self.delegate = self;
-        self.dataSource = self;
-        //注册
-//        [self registerClass:[WaterFlowCell class] forCellWithReuseIdentifier:@"cell"];
-    }
-    return self;
-}
 
 //重写initWithFrame:collectionViewLayout
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewFlowLayout *)layout {
@@ -53,13 +27,12 @@
         self.backgroundColor = [UIColor systemBlueColor];//背景颜色
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;//不显示滚动条
-//        self.clipsToBounds = NO;
-//        self.pagingEnabled = YES;//开启分页
+        self.clipsToBounds = NO;
+        self.pagingEnabled = YES;//开启分页
         self.bounces = NO;//弹簧效果
-        
-//        [self registerClass:[WaterFlowCell class] forCellWithReuseIdentifier:@"cell"];
-//        self.delegate = self;
-//        self.dataSource = self;
+
+        self.delegate = self;
+        self.dataSource = self;
         
     }
     
@@ -68,79 +41,73 @@
 
 
 #pragma mark- <UICollectionViewDataSource>
+//左右间距
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 20;
+}
 
-//展示的item的个数
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+//上下间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 50;
 }
 
-//每个item展示的内容
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"Cell";
-    WaterFlowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    if (!cell) {
-        cell = [[WaterFlowCell alloc] initWithCell];
-        cell.titleLab.backgroundColor = [UIColor orangeColor];
-        cell.titleLab.text = @"teest-----";
-        
-        cell.layer.cornerRadius = 5.0;
-        cell.layer.masksToBounds = YES;
-        cell.backgroundColor = [UIColor whiteColor];
-    }
-    return cell;
+
+//设置{上, 左, 下, 右}边界缩进
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+
+    return UIEdgeInsetsMake(10, 30, 30, 30);
 }
 
-//item大小
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-  
-//  UIImage *image = self.imgArr[indexPath.item];
-//  float height = [self imgHeight:image.size.height width:image.size.width];
-  
-//  return CGSizeMake(100, height);
-    return CGSizeMake(100, 200);
-  
+//列数:2
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    float cellWidth = screenWidth / 3.0;
+    //  UIImage *image = self.imgArr[indexPath.item];
+        //根据图片数组image设置大小
+    //  float height = [self imgHeight:image.size.height width:image.size.width];
+    float height = 200;
+    CGSize size = CGSizeMake(cellWidth, height);
+    return size;
 }
-
 
 //图片大小修改
 -(float)imgHeight:(float)height width:(float)width{
-//   高度/宽度 = 压缩后高度/压缩后宽度（100）
+    //高度/宽度 = 压缩后高度/压缩后宽度（100）
   float newHeight = height / width * 100;
   return newHeight;
 }
 
-//edgeInsets
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-  UIEdgeInsets edgeInsets = {5,5,5,5};
-  return edgeInsets;
+#pragma mark- <UICollectionViewDelegate>
+
+//展示的item(cell)的个数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 50;
 }
 
-//#pragma mark- <UICollectionViewDelegateFlowLayout>
-//定义每个UICollectionView 的大小
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return CGSizeMake(96, 100);
-//}
+//每个item(cell)展示的内容
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+   
+    WaterFlowCell *cell = [WaterFlowCell CreateReusableCell:collectionView cellForItemAtIndexPath:indexPath];
+    
+//    if (indexPath.section == 0) {
+//        cell.backgroundColor = [UIColor orangeColor];
+//        cell.layer.cornerRadius = 10.0;
+//        cell.layer.masksToBounds = YES;
+//        }
+    
+//    if (!cell) {
+//        cell = [[WaterFlowCell alloc] initWithCell];
+//        cell.backgroundColor = [UIColor redColor];
+//
+//        cell.layer.cornerRadius = 5.0;
+//        cell.layer.masksToBounds = YES;
+//    }
+    return cell;
+}
 
-//定义每个UICollectionView 的 margin
-//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-//    return UIEdgeInsetsMake(5, 5, 5, 5);
-//}
 
 
-//#pragma mark- <UICollectionViewDelegate>
-
-//UICollectionView被选中时调用的方法
-//-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor whiteColor];
-//}
-
-//返回这个UICollectionView是否可以被选择
-//-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return YES;
-//}
 
 
 /*

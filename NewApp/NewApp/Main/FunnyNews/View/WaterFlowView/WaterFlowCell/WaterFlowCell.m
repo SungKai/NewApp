@@ -7,13 +7,14 @@
 
 #import "WaterFlowCell.h"
 #import "Masonry.h"
-
+static NSString *CellIdentifier = @"Cell";
 @implementation WaterFlowCell
 
+//自定初始化
 - (instancetype)initWithCell {
     self = [super self];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor purpleColor];
         [self.contentView addSubview:self.titleLab];
         [self.contentView addSubview:self.hintLab];
         [self.contentView addSubview:self.imgView];
@@ -22,6 +23,20 @@
     }
     return self;
 }
+
+//复用
++ (WaterFlowCell *)CreateReusableCell:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    WaterFlowCell *cell = (WaterFlowCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[WaterFlowCell alloc] initWithCell];
+        cell.backgroundColor = [UIColor redColor];
+        cell.titleLab.backgroundColor = [UIColor orangeColor];
+        cell.hintLab.backgroundColor = [UIColor systemPinkColor];
+    }
+   
+    return cell;
+}
+
 
 
 #pragma mark- 懒加载
@@ -67,7 +82,9 @@
 
 - (void)setPosition {
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(20);
+        make.right.equalTo(self.contentView).offset(-18);
+        make.centerY.equalTo(self.contentView);
+        make.size.mas_equalTo(CGSizeMake(76, 76));
     }];
 }
 

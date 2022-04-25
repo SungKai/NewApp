@@ -14,8 +14,9 @@
 #import "WaterFlowLayout.h"
 //Tool
 #import "UIView+RoundCorner.h"
+static NSString *CellIdentifier = @"Cell";
 
-@interface FunnyNewsViewController ()
+@interface FunnyNewsViewController () 
 
 /// Banner
 @property (nonatomic, strong) BannerView *bannerView;
@@ -34,7 +35,8 @@
     [self.view addSubview:self.bannerView];
     [self.view addSubview:self.waterFlowView];
     [self.view bringSubviewToFront:self.bannerView];
-    
+    //注册
+    [self.waterFlowView registerClass:[WaterFlowCell class] forCellWithReuseIdentifier:CellIdentifier];
     
     
 }
@@ -62,7 +64,6 @@
     }
     return _waterFlowView;
 }
-
 
 
 /*
