@@ -10,6 +10,7 @@
 
 @implementation NavView
 //初始化方法
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self addSubview:self.currentBtn];
