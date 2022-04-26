@@ -20,13 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 图片
 @property (nonatomic, strong) UIImageView *imgView;
 
-//+ (CurrentNewsCell *)CreateReusableCell:(UITableView *)tableView;
-//+ (WaterFlowCell *)CreateResusableCell
-
 
 - (instancetype)initWithCell;
+//数据
 - (WaterFlowCell *)cellWithInformation:(WaterFlowCell *)cell WithTitleText:(NSString *)titleText WithHintText:(NSString *)hintText WithImageURL:(NSString *)imageURL;
-
+//复用
++ (WaterFlowCell *)CreateReusableCell:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

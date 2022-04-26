@@ -10,18 +10,19 @@
 //View
 #import "BannerView.h"
 #import "WaterFlowView.h"
-//M
-#import "ZHNewsModel.h"
+#import "WaterFlowCell.h"
+#import "WaterFlowLayout.h"
 //Tool
 #import "UIView+RoundCorner.h"
+static NSString *CellIdentifier = @"Cell";
 
-@interface FunnyNewsViewController ()
+@interface FunnyNewsViewController () 
 
+/// Banner
 @property (nonatomic, strong) BannerView *bannerView;
 
+///瀑布布局
 @property (nonatomic, strong) WaterFlowView *waterFlowView;
-
-@property (nonatomic, strong) ZHNewsModel *zhNewsModel;
 
 @end
 
@@ -29,27 +30,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorNamed:@"238_238_238"];
+    self.view.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.bannerView];
-    //请求Latest数据
-    __weak typeof(self) weakSelf = self;
-    [self.zhNewsModel requestLastest:^{
-        //1.banner
-        weakSelf.bannerView.bannerZHData = weakSelf.zhNewsModel.topNewsModel;
-        //2.cell
-        weakSelf.waterFlowView.cellZHData = weakSelf.zhNewsModel.bodyNewsModel;
-
-    } failure:^(NSError * _Nonnull error) {
-        
-    }];
+    [self.view addSubview:self.waterFlowView];
+    [self.view bringSubviewToFront:self.bannerView];
+    //注册
+    [self.waterFlowView registerClass:[WaterFlowCell class] forCellWithReuseIdentifier:CellIdentifier];
+    
+    
 }
 
 #pragma mark-懒加载
 - (BannerView *)bannerView{
     if (!_bannerView) {
         _bannerView = [[BannerView alloc] init];
-        _bannerView.backgroundColor = [UIColor colorNamed:@"254_149_87"];
+        _bannerView.backgroundColor = [UIColor blackColor];
         [_bannerView stretchLeft_toPointX:self.view.left offset:20];
         [_bannerView stretchTop_toPointY:self.view.top offset:20];
         [_bannerView stretchRight_toPointX:self.view.right offset:20];
@@ -59,13 +55,17 @@
     }
     return _bannerView;
 }
+
 - (WaterFlowView *)waterFlowView {
     if (!_waterFlowView) {
-        _waterFlowView = [[WaterFlowView alloc] init];
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        _waterFlowView = [[WaterFlowView alloc] initWithFrame:CGRectMake(0, self.bannerView.height + 20, ScreenWidth, ScreenHeight) collectionViewLayout:layout];
         
     }
     return _waterFlowView;
 }
+
+
 /*
 #pragma mark - Navigation
 
