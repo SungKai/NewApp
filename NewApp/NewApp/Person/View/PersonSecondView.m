@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor colorNamed:@"237_237_237"];
-        self.frame = CGRectMake(20, 300, ScreenWidth - 40, 150);
+        self.frame = CGRectMake(20, 330, ScreenWidth - 40, 150);
         [self applyRoundCorners:UIRectCornerAllCorners radius:20];
        
         [self addSubview:self.message];
