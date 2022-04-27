@@ -6,36 +6,46 @@
 //
 
 #import "PersonViewController.h"
-#import "PersonFirstView.h"
+
+#import "PersonDetailController.h"
+
+#import "PersonDetialView.h"
 #import "PersonSecondView.h"
-#import "Masonry.h"
+
+#pragma mark - PersonViewController ()
 
 @interface PersonViewController ()
 
-@property (nonatomic, strong) PersonFirstView *personFirstView;
+@property (nonatomic, strong) PersonDetailController *personDetailVC;
 
 @property (nonatomic, strong) PersonSecondView *personSecondView;
 
 @end
 
+#pragma mark - PersonViewController
+
 @implementation PersonViewController
+
+#pragma mark - Life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorNamed:@"247_247_247"];
-    [self.view addSubview:self.personFirstView];
+    [self addChildViewController:self.personDetailVC];
+    [self.view addSubview:self.personDetailVC.view];
     [self.view addSubview:self.personSecondView];
 }
 
-#pragma mark- 懒加载
-- (PersonFirstView *)personFirstView {
-    if (!_personFirstView) {
-        _personFirstView = [[PersonFirstView alloc] initWithFirstView];
-        
-    }
-    return _personFirstView;
-}
+#pragma mark - Getter
 
+- (PersonDetailController *)personDetailVC {
+    if (_personDetailVC == nil) {
+        _personDetailVC = [[PersonDetailController alloc] init];
+        _personDetailVC.view.top = 100;
+        _personDetailVC.view.centerX = self.view.SuperCenter.x;
+    }
+    return _personDetailVC;
+}
 
 - (PersonSecondView *)personSecondView {
     if (!_personSecondView) {

@@ -14,9 +14,10 @@
 		140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102B22806E51800AB27C2 /* SSRTopBarBaseView.m */; };
 		140102B82806E59200AB27C2 /* SSRTextCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102B72806E59200AB27C2 /* SSRTextCycleCell.m */; };
 		140102BC2806E5A500AB27C2 /* SSRTextCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140102BA2806E5A500AB27C2 /* SSRTextCycleView.m */; };
+		1434B4812818FAE600D2749B /* PersonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1434B4802818FAE600D2749B /* PersonDetailController.m */; };
 		1440DD132803006400652F5D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1440DD112803006400652F5D /* UIView+Frame.m */; };
 		7A5260C12809BD0A000A06BC /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */; };
-		7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548536280DBA2A00338BF1 /* PersonFirstView.m */; };
+		7A548537280DBA2A00338BF1 /* PersonDetialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548536280DBA2A00338BF1 /* PersonDetialView.m */; };
 		7A54853A280DBA3700338BF1 /* PersonSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A548539280DBA3700338BF1 /* PersonSecondView.m */; };
 		7A7B178C2818603700344225 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B178A2818603700344225 /* Color.xcassets */; };
 		7A7B178D2818603700344225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B178B2818603700344225 /* Assets.xcassets */; };
@@ -73,13 +74,16 @@
 		140102BB2806E5A500AB27C2 /* SSRTextCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRTextCycleView.h; sourceTree = "<group>"; };
 		140102BE2806E5E900AB27C2 /* URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLHeader.h; sourceTree = "<group>"; };
 		140102BF2806E5FD00AB27C2 /* ExtentionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtentionHeader.h; sourceTree = "<group>"; };
+		1434B47F2818FAE600D2749B /* PersonDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDetailController.h; sourceTree = "<group>"; };
+		1434B4802818FAE600D2749B /* PersonDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDetailController.m; sourceTree = "<group>"; };
+		1434B4822818FCD900D2749B /* PersonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonHeader.h; sourceTree = "<group>"; };
 		1440DD112803006400652F5D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1440DD122803006400652F5D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		67926DF1803C2B53047F7BFD /* Pods-NewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewApp.release.xcconfig"; path = "Target Support Files/Pods-NewApp/Pods-NewApp.release.xcconfig"; sourceTree = "<group>"; };
 		7A5260BF2809BD0A000A06BC /* UIView+RoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
 		7A5260C02809BD0A000A06BC /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
-		7A548535280DBA2A00338BF1 /* PersonFirstView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonFirstView.h; sourceTree = "<group>"; };
-		7A548536280DBA2A00338BF1 /* PersonFirstView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonFirstView.m; sourceTree = "<group>"; };
+		7A548535280DBA2A00338BF1 /* PersonDetialView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDetialView.h; sourceTree = "<group>"; };
+		7A548536280DBA2A00338BF1 /* PersonDetialView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDetialView.m; sourceTree = "<group>"; };
 		7A548538280DBA3700338BF1 /* PersonSecondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSecondView.h; sourceTree = "<group>"; };
 		7A548539280DBA3700338BF1 /* PersonSecondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSecondView.m; sourceTree = "<group>"; };
 		7A7B178A2818603700344225 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -278,8 +282,10 @@
 		7A548534280DB95900338BF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7A548535280DBA2A00338BF1 /* PersonFirstView.h */,
-				7A548536280DBA2A00338BF1 /* PersonFirstView.m */,
+				1434B47F2818FAE600D2749B /* PersonDetailController.h */,
+				1434B4802818FAE600D2749B /* PersonDetailController.m */,
+				7A548535280DBA2A00338BF1 /* PersonDetialView.h */,
+				7A548536280DBA2A00338BF1 /* PersonDetialView.m */,
 				7A548538280DBA3700338BF1 /* PersonSecondView.h */,
 				7A548539280DBA3700338BF1 /* PersonSecondView.m */,
 			);
@@ -291,6 +297,7 @@
 			children = (
 				B5244C45280466620034FC6A /* PersonViewController.h */,
 				B5244C46280466620034FC6A /* PersonViewController.m */,
+				1434B4822818FCD900D2749B /* PersonHeader.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -591,8 +598,8 @@
 		7A7B17F72818625D00344225 /* UILabel+AutoHeight */ = {
 			isa = PBXGroup;
 			children = (
-				7A7B17F82818625D00344225 /* UILabel+AutoHeight.m */,
 				7A7B17F92818625D00344225 /* UILabel+AutoHeight.h */,
+				7A7B17F82818625D00344225 /* UILabel+AutoHeight.m */,
 			);
 			name = "UILabel+AutoHeight";
 			path = "NewApp/UILabel+AutoHeight";
@@ -636,8 +643,8 @@
 		B5244C44280465880034FC6A /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				7A548534280DB95900338BF1 /* View */,
 				7A54853B280DBD5E00338BF1 /* ViewController */,
+				7A548534280DB95900338BF1 /* View */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -667,8 +674,6 @@
 		B54BE2B52801AF0F0095769A = {
 			isa = PBXGroup;
 			children = (
-				7A7B178B2818603700344225 /* Assets.xcassets */,
-				7A7B178A2818603700344225 /* Color.xcassets */,
 				B54BE2C02801AF0F0095769A /* NewApp */,
 				B54BE2BF2801AF0F0095769A /* Products */,
 				2B56657591FF0C9D98B31688 /* Pods */,
@@ -699,6 +704,8 @@
 				7A7B17A62818608900344225 /* ZHNewsModel */,
 				7A7B17E0281860F400344225 /* SNModel */,
 				B54BE2E62801B0B40095769A /* PrefixHeader.pch */,
+				7A7B178B2818603700344225 /* Assets.xcassets */,
+				7A7B178A2818603700344225 /* Color.xcassets */,
 				B54BE2D22801AF110095769A /* Info.plist */,
 				B54BE2CF2801AF110095769A /* LaunchScreen.storyboard */,
 				B54BE2D32801AF110095769A /* main.m */,
@@ -858,7 +865,7 @@
 				1440DD132803006400652F5D /* UIView+Frame.m in Sources */,
 				B5244C5328053C120034FC6A /* NSDate+Day.m in Sources */,
 				7A7B17ED281860F400344225 /* SNNextViewController.m in Sources */,
-				7A548537280DBA2A00338BF1 /* PersonFirstView.m in Sources */,
+				7A548537280DBA2A00338BF1 /* PersonDetialView.m in Sources */,
 				7A7B17EF281860F400344225 /* SchoolNewsTableView.m in Sources */,
 				7A7B17F1281860F400344225 /* SchoolNewsViewController.m in Sources */,
 				1401029D2806D8F200AB27C2 /* NewPresenter.m in Sources */,
@@ -886,6 +893,7 @@
 				7A7B17D6281860E200344225 /* CurrentNewsViewController.m in Sources */,
 				B54BE2DC2801AFD40095769A /* MainViewController.m in Sources */,
 				7A7B17B62818608900344225 /* WaterFlowView.m in Sources */,
+				1434B4812818FAE600D2749B /* PersonDetailController.m in Sources */,
 				7A7B17BA2818608900344225 /* FunnyNewsViewController.m in Sources */,
 				140102B42806E51800AB27C2 /* SSRTopBarBaseView.m in Sources */,
 				7A7B17B22818608900344225 /* FNNextViewController.m in Sources */,

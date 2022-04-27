@@ -23,4 +23,12 @@
 
 #define PingFangSCSemibold @"PingFangSC-Semibold"
 
+#pragma mark - Singleton
+
+#define UserDefaults NSUserDefaults.standardUserDefaults
+
+#pragma mark - Modularization
+
+#import "PersonHeader.h"
+
 #endif /* ExtentionHeader_h */

@@ -8,7 +8,6 @@
 #import <UIKit/UIKit.h>
 
 #import "MainViewController.h"
-#import "LoginViewController.h"
 #import "PersonViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
